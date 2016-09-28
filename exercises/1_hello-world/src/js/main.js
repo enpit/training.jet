@@ -46,10 +46,8 @@ requirejs.config(
 );
 
 require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
-  function(oj, ko, $)
-  {
-    $(function()
-    {
+  function(oj, ko, $) {
+    $(document).ready(function() { 
       function init() {
         /*
          * Gib eine 'Hello World' Meldung aus:
@@ -57,15 +55,6 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
          *  - setze den Text des divs auf 'Hallo DOAG2016'
          */
       }
-
-      // If running in a hybrid (e.g. Cordova) environment, we need to wait for the deviceready
-      // event before executing any code that might interact with Cordova APIs or plugins.
-      if ($(document.body).hasClass('oj-hybrid')) {
-        document.addEventListener("deviceready", init);
-      } else {
-        init();
-      }
-
     });
   }
 );
