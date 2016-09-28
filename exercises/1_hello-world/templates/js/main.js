@@ -51,11 +51,16 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
     $(function()
     {
       function init() {
+        // FINAL_START
+        $('#message').text('Hallo DOAG2016!');
+        // FINAL_END
+        // WORKSHOP_START
         /*
          * Gib eine 'Hello World' Meldung aus:
          *  - selektiere das div-Element mit der ID 'message' (vorzugsweise mit jQuery)
          *  - setze den Text des divs auf 'Hallo DOAG2016'
          */
+        // WORKSHOP_END
       }
 
       // If running in a hybrid (e.g. Cordova) environment, we need to wait for the deviceready
