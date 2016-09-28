@@ -20,6 +20,6 @@
     "split-guide": "^1.0.0"
   },
   "scripts": {
-    "generate": "split-guide generate"
+    "generate": "split-guide generate --templates-dir=templates --exercises-dir=src --exercises-final-dir=solutions"
   }
 }
