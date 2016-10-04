@@ -48,9 +48,21 @@ requirejs.config(
 require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
   function(oj, ko, $) {
     $(document).ready(function() { 
-      function init() {
-        $('#message').text('Hallo DOAG2016!');
+      function ViewModel() {
+        var self = this;
+        self.message = ko.observable('Hallo DOAG2016');
       }
+      // FINAL_END
+      var viewModel, element;
+      // fetch the div with the 'workshop' id from the DOM and store it in the 'element' var
+      element = document.getElementById('workshop');
+      // instantiate your view model using 'new' and store it in the viewModel var
+      viewModel = new ViewModel();
+      // call ko.applyBindings with the viewModel and element parameters
+      ko.applyBindings(
+        viewModel,
+        element
+      );
     });
   }
 );

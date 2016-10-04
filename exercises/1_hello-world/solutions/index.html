@@ -41,8 +41,16 @@
   </head>
   <body>
 
-
-    <div id="message"></div>
+    <div id="workshop">
+      <input type="text"
+             id="message-input"
+             data-bind="ojComponent: {
+                component: 'ojInputText', 
+                value: message
+              }"
+      />
+      <span id="message" data-bind="text: title"></span>
+    </div>
     <script type="text/javascript" data-main="js/main" src="js/libs/require/require.js"></script>
 
   </body>

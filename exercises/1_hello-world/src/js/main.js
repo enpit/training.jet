@@ -48,13 +48,24 @@ requirejs.config(
 require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
   function(oj, ko, $) {
     $(document).ready(function() { 
-      function init() {
+      function ViewModel() {
+        var self = this;
         /*
-         * Gib eine 'Hello World' Meldung aus:
-         *  - selektiere das div-Element mit der ID 'message' (vorzugsweise mit jQuery)
-         *  - setze den Text des divs auf 'Hallo DOAG2016'
+         * TODO: Gib eine 'Hello World' Meldung aus:
+         * Erstelle ein Knockout Observable und setze dessen Text auf 'Hallo DOAG2016'
          */
       }
+      // FINAL_END
+      var viewModel, element;
+      // fetch the div with the 'workshop' id from the DOM and store it in the 'element' var
+      element = document.getElementById('workshop');
+      // instantiate your view model using 'new' and store it in the viewModel var
+      viewModel = new ViewModel();
+      // call ko.applyBindings with the viewModel and element parameters
+      ko.applyBindings(
+        viewModel,
+        element
+      );
     });
   }
 );

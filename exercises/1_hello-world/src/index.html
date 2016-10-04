@@ -41,8 +41,18 @@
   </head>
   <body>
 
-
-    <div id="message"></div>
+    <div id="workshop">
+      <input type="text"
+             id="message-input"
+             data-bind="ojComponent: {
+                component: 'ojInputText', 
+                value: message
+              }"
+      />
+      <!-- TODO: Zeige in diesem span-Element den Text an, der im obigen input-Element eingegeben wird.
+        Konfiguriere das Data-Binding dieses span-Elements, indem du das data-bind Attribut setzt -->
+      <span id="message"></span>
+    </div>
     <script type="text/javascript" data-main="js/main" src="js/libs/require/require.js"></script>
 
   </body>
