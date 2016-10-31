@@ -1,5 +1,5 @@
 # enpit.training.jet (im Aufbau)
-Materialien für den DOAG 2016 Schulungstag "Durchstarten mit Oracle JET"
+Materialien für den [DOAG 2016 Schulungstag "Durchstarten mit Oracle JET" am 18.11.2016](http://2016.doag.org/de/programm/schulungstag/#tab-9929-1)
 
 ## Systemvoraussetzung
 - Notebook mit MacOS, Windows oder Linux
@@ -11,7 +11,7 @@ Materialien für den DOAG 2016 Schulungstag "Durchstarten mit Oracle JET"
 1. [Git](https://git-scm.com/) installieren bzw. [Git Bash](https://git-for-windows.github.io/) für Windows-User
 2. [node.js](https://nodejs.org/en/) Version 4 installieren
 3. Grunt CLI und Bower per Kommandozeile installieren: `npm i -g grunt-cli bower`
-4. [Chrome Browser]((https://www.google.de/chrome/browser/desktop)) (aktuelle Version) installieren 
+4. [Chrome Browser](https://www.google.de/chrome/browser/desktop) (aktuelle Version) installieren 
 5. Als IDE empfehlen wir [NetBeans](https://netbeans.org/index.html) (HTML5/JavaScript Edition, Version 8.2) oder [Visual Studio Code](http://code.visualstudio.com/) 1.6.
 6. Dieses Repository herunterladen (ZIP-Datei per Webinterface herunterladen oder `git clone https://github.com/enpit/training.jet` ausführen)
 7. Per Kommandozeile im Root-Verzeichnis dieses Projektes die benötigten Module installieren: `npm install`
@@ -29,5 +29,6 @@ $ npm -v
 
 ## Die Anwendung starten
 In der Kommandozeile in das Root-Verzeichnis dieses Projektes navigieren
+
 1. `grunt build` ausführen
 2. `grunt serve` ausführen - ein Browserfenster öffnet sich und lädt die Anwendung, bei Änderungen aktualisiert die Seite sich automatisch
