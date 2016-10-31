@@ -45,9 +45,9 @@ requirejs.config(
 }
 );
 
-require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
+require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'],
   function(oj, ko, $) {
-    $(document).ready(function() { 
+    $(document).ready(function() {
       function ViewModel() {
         var self = this;
         // FINAL_START
@@ -60,7 +60,6 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
          */
         // WORKSHOP_END
       }
-      // FINAL_END
       var viewModel, element;
       // fetch the div with the 'workshop' id from the DOM and store it in the 'element' var
       element = document.getElementById('workshop');

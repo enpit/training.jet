@@ -45,9 +45,9 @@ requirejs.config(
 }
 );
 
-require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
+require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'],
   function(oj, ko, $) {
-    $(document).ready(function() { 
+    $(document).ready(function() {
       function ViewModel() {
         var self = this;
         /*
@@ -55,7 +55,6 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout'],
          * Erstelle ein Knockout Observable und setze dessen Text auf 'Hallo DOAG2016'
          */
       }
-      // FINAL_END
       var viewModel, element;
       // fetch the div with the 'workshop' id from the DOM and store it in the 'element' var
       element = document.getElementById('workshop');
