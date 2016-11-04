@@ -50,22 +50,21 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
     $(document).ready(function() {
       function ViewModel() {
         var self = this;
-        // FINAL_START
-        self.message = ko.observable('Hallo DOAG2016');
-        // FINAL_END
+
         // WORKSHOP_START
-        /*
-         * TODO: Gib eine 'Hello World' Meldung aus:
-         * Erstelle ein Knockout Observable und setze dessen Text auf 'Hallo DOAG2016'
-         */
+        // TODO: Füge hier die Codezeile aus dem Cookbook ein
         // WORKSHOP_END
+        // FINAL_START
+        // Erstelle ein Knockout Observable und setze dessen Text auf 'Hallo DOAG2016':
+        self.value = ko.observable('Hallo DOAG2016');
+        // FINAL_END
       }
       var viewModel, element;
-      // fetch the div with the 'workshop' id from the DOM and store it in the 'element' var
+      // Hole das div-Element mit der ID 'workshop' aus dem DOM:
       element = document.getElementById('workshop');
-      // instantiate your view model using 'new' and store it in the viewModel var
+      // Instanziiere das View Model:
       viewModel = new ViewModel();
-      // call ko.applyBindings with the viewModel and element parameters
+      // Knockout Bindings auf das workshop-div anwenden:
       ko.applyBindings(
         viewModel,
         element
