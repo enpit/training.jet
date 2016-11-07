@@ -2,9 +2,11 @@
 
 In dieser ersten Hands-On Session wird eine Hello World Anwendung geschrieben.
 Hierfür muss im wesentlichen nur ein Codeabschnitt aus dem [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html) kopiert werden.
+
+## Lernziel
+
 Ziel ist es, dass die Schulungsteilnehmer eine erste Oracle JET Anwendung mit Two-Way Data-Binding programmieren sowie erste Erfahrungen mit besagtem Cookbook machen.
 Etwaige Probleme mit der Arbeitsumgebung können an dieser Stelle ebenfalls erkannt und beseitigt werden.
-
 
 ## Aufgaben
 
