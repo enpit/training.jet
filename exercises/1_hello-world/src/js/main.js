@@ -51,7 +51,11 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
       function ViewModel() {
         var self = this;
 
-        // TODO: Füge hier die Codezeile aus dem Cookbook ein
+        /*
+         * TODO (Beispielcode im Cookbook):
+         * Erstelle ein Knockout Observable mit dem Namen 'value' und
+         * setze dessen Text auf 'Hallo DOAG2016'
+         */
       }
       var viewModel, element;
       // Hole das div-Element mit der ID 'workshop' aus dem DOM:

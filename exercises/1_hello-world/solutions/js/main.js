@@ -51,7 +51,10 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
       function ViewModel() {
         var self = this;
 
-        // Erstelle ein Knockout Observable und setze dessen Text auf 'Hallo DOAG2016':
+        /*
+         * Erstelle ein Knockout Observable mit dem Namen 'value' und
+         * setze dessen Text auf 'Hallo DOAG2016'
+         */
         self.value = ko.observable('Hallo DOAG2016');
       }
       var viewModel, element;
