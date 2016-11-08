@@ -24,7 +24,7 @@ define([
       self.artists, {idAttribute: "id"});
     // mock an artist s.t. the artist ViewModel does not crash
     artist = { images: [] };
-    self.selectedArtist = ko.observable(mockArtist).publishOn('selectedArtist');
+    self.selectedArtist = ko.observable(artist).publishOn('selectedArtist');
 
     self.query.subscribe(function search () {
       self.artists.removeAll(); // clear previous search results
