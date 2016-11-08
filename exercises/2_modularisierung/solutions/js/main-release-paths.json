@@ -9,5 +9,6 @@
   "ojL10n": "libs/oj/v2.1.0/ojL10n",
   "ojtranslations": "libs/oj/v2.1.0/resources",
   "text": "libs/require/text",
-  "signals": "libs/js-signals/signals.min"
+  "signals": "libs/js-signals/signals.min",
+  "knockout-postbox": "libs/knockout-postbox/knockout-postbox"
 }

@@ -8,8 +8,8 @@ Hierfür muss im wesentlichen nur ein Codeabschnitt aus dem [Cookbook](http://ww
 Um diese Übung durchführen zu können müssen (am besten bereits vor der Schulung) einmalig im heruntergeladenen Repository folgende Kommandos ausgeführt werden:
 
 ``` cmd
-cd exercises/1_hello-world
-npm install
+$ cd exercises/1_hello-world
+$ npm install
 ```
 
 ## Lernziel

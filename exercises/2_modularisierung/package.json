@@ -1,16 +1,20 @@
 {
-  "name": "enpit.jet-workshop.hello-world",
+  "name": "enpit.jet-workshop.modularisierung",
   "version": "1.0.0",
-  "description": "enpit JET Workshop, Part 1: Hello world",
+  "description": "enpit JET Workshop, Part 2: Modularisierung",
   "author": {
-    "name": "enpit"
+    "name": "enpit",
+    "email": "info@enpit.de",
+    "website": "http://www.enpit.de"
   },
   "devDependencies": {
+    "cpr": "^2.0.0",
     "grunt": "^1.0.1",
     "grunt-bowercopy": "1.2.4",
     "grunt-oraclejet": "~1.1.0",
     "load-grunt-config": "0.19.2",
-    "oraclejet-tooling": "~1.1.0"
+    "oraclejet-tooling": "~1.1.0",
+    "split-guide": "^1.1.0"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -20,6 +24,9 @@
     "split-guide": "^1.0.0"
   },
   "scripts": {
-    "generate": "split-guide generate --templates-dir=templates --exercises-dir=src --exercises-final-dir=solutions"
+    "copylibs": "grunt bowercopy && grunt build && cpr src/js/libs/ solutions/js/libs --overwrite",
+    "generate": "split-guide generate --templates-dir=templates --exercises-dir=src --exercises-final-dir=solutions && npm run copylibs",
+    "postinstall": "bower install && npm run copylibs",
+    "start": "grunt serve"
   }
 }

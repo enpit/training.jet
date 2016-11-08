@@ -1,0 +1,58 @@
+body {
+  width: 600px;
+}
+
+.appheader-logo-enpit {
+  width: 106px;
+  height: 40px;
+}
+
+.appheader-logo-enpit:before {
+  /* use url to logo on github because split-guide messes up the image file when copying it to the src directory */
+  content: url("https://raw.githubusercontent.com/enpit/jet-spotify-explorer/master/src/css/images/enpit_logo_rgb_130x.png");
+}
+
+.oj-web-applayout-header-title {
+  margin-left: 10px;
+}
+
+.album-image, .artist-image {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100%;
+}
+
+.thumbnail, .thumbnail-container {
+  width: 48px;
+  height: 48px;
+}
+
+.cover, .cover-container {
+  width: 256px;
+  height: 256px;
+}
+
+/* the following is not recommended - directly declare oj-flex classes in your html instead */
+.artist-name {
+  display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+
+  padding-left: 1em;
+}
+
+.add-artist-button .oj-button-text {
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+div#add-artist-container .oj-flex .oj-flex-item:nth-child(2) {
+  margin-left: 1em;
+}

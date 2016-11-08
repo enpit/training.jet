@@ -13,80 +13,84 @@
  */
 
 requirejs.config(
-{
-  baseUrl: 'js',
+  {
+    baseUrl: 'js',
 
-  // Path mappings for the logical module names
-  paths:
-  //injector:mainReleasePaths
-  {
-    'knockout': 'libs/knockout/knockout-3.4.0.debug',
-    'jquery': 'libs/jquery/jquery-3.1.0',
-    'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
-    'promise': 'libs/es6-promise/es6-promise',
-    'hammerjs': 'libs/hammer/hammer-2.0.8',
-    'ojdnd': 'libs/dnd-polyfill/dnd-polyfill-1.0.0',
-    'ojs': 'libs/oj/v2.1.0/debug',
-    'ojL10n': 'libs/oj/v2.1.0/ojL10n',
-    'ojtranslations': 'libs/oj/v2.1.0/resources',
-    'text': 'libs/require/text',
-    'signals': 'libs/js-signals/signals'
-  }
-  //endinjector
-  ,
-  // Shim configurations for modules that do not expose AMD
-  shim:
-  {
-    'jquery':
+    // Path mappings for the logical module names
+    paths:
+    //injector:mainReleasePaths
     {
-      exports: ['jQuery', '$']
+      'knockout': 'libs/knockout/knockout-3.4.0.debug',
+      'jquery': 'libs/jquery/jquery-3.1.0',
+      'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
+      'promise': 'libs/es6-promise/es6-promise',
+      'hammerjs': 'libs/hammer/hammer-2.0.8',
+      'ojdnd': 'libs/dnd-polyfill/dnd-polyfill-1.0.0',
+      'ojs': 'libs/oj/v2.1.0/debug',
+      'ojL10n': 'libs/oj/v2.1.0/ojL10n',
+      'ojtranslations': 'libs/oj/v2.1.0/resources',
+      'text': 'libs/require/text',
+      'signals': 'libs/js-signals/signals',
+      'knockout-postbox': 'libs/knockout-postbox/knockout-postbox'
+    }
+    //endinjector
+    ,
+    // Shim configurations for modules that do not expose AMD
+    shim:
+    {
+      jquery:
+      {
+        exports: ['jQuery', '$']
+      }
     }
   }
-}
 );
 
-require([
-    'ojs/ojcore',
-    'knockout',
-    'jquery',
-    'ojs/ojknockout',
-    'ojs/ojtable',
-    'ojs/ojarraytabledatasource'
-  ],
-  function(oj, ko, $) {
-    $(document).ready(function() { 
-      function ViewModel() {
-        var self = this;
+require(['ojs/ojcore',
+         'knockout',
+         'jquery',
+         'knockout-postbox',
+         'ojs/ojknockout',
+         'ojs/ojtoolbar',
+         'ojs/ojbutton',
+         // WORKSHOP_BEGIN
+         // TODO: Importiere hier das 'ojs/ojrouter' Modul
+         // WORKSHOP_END
+         // FINAL_BEGIN
+         'ojs/ojrouter',
+         // FINAL_END
+         'ojs/ojmodule'],
+function (oj, ko, $) {
+  // WORKSHOP_BEGIN
+  // TODO (Beispiel s. http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=router&demo=simple):
+  // WORKSHOP_END
+  // Speichere die statische Router Instanz in einer lokalen Variable
+  // FINAL_BEGIN
+  var router = oj.Router.rootInstance;
+  // FINAL_END
+  // Konfiguriere den Router, sodass die Module 'search' und 'artist' bekannt werden
+  // FINAL_BEGIN
+  router.configure({
+    'search': {label: 'Suche', isDefault: true},
+    'artist': {label: 'Interpret'},
+    'album': {label: 'Album'},
+    'add-artist': {label: 'Add Artist'}
+  });
+  // FINAL_END
 
-        // create an observable that contains the page's title and assign it to self.title
-        self.title = ko.observable('Bundesliga Tabelle');
-        // create an ArrayTableDataSource with an empty array (as no data has been loaded yet)
-        var options = { idAttribute: 'key' };
-        self.datasource = new oj.ArrayTableDataSource(
-          [],
-          options
-        );
+  // Erstelle eine viewModel Variable, deren 'router' Attribute auf den zuvor konfigurierten Router zeigt
+  // FINAL_BEGIN
+  var viewModel = {
+    router: router
+  };
+  // FINAL_END
 
-        // this $.getJSON call loads the data via jQuerys getJSON function, which returns a promise
-        $.getJSON(
-          'https://buli-data-xljwsvcith.now.sh/de.1.clubs.json'
-        ).then(function success (data) {
-            self.datasource.add(data.clubs);
-          }, function error (err) {
-            console.error(err);
-          }
-        );
-      }
-      var viewModel, element;
-      // fetch the div with the 'workshop' id from the DOM and store it in the 'element' var
-      element = document.getElementById('workshop');
-      // instantiate your view model using 'new' and store it in the viewModel var
-      viewModel = new ViewModel();
-      // call ko.applyBindings with the viewModel and element parameters
-      ko.applyBindings(
-        viewModel,
-        element
-      );
+  $(document).ready(function () {
+    // Rufe ko.applyBindings auf sobald der Router sich synchronisiert hat
+    // FINAL_BEGIN
+    oj.Router.sync().then(function () {
+      ko.applyBindings(viewModel, document.getElementById('page'));
     });
-  }
-);
+    // FINAL_END
+  });
+});
