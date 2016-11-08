@@ -14,15 +14,19 @@ npm install
 
 ## Lernziel
 
-Ziel ist es, dass die Schulungsteilnehmer eine erste Oracle JET Anwendung mit Two-Way Data-Binding programmieren sowie erste Erfahrungen mit besagtem Cookbook machen.
+Ziel ist es, dass die Schulungsteilnehmer eine erste Oracle JET Anwendung mit Two-Way Data-Binding programmieren sowie erste Erfahrungen mit der Verwendung des JET Cookbooks machen.
 Etwaige Probleme mit der Arbeitsumgebung können an dieser Stelle ebenfalls erkannt und beseitigt werden.
 
 ## Aufgaben
 
-Der relevante Code ist im [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=textInput&demo=text) zu finden.
+Schreibe eine Anwendung in der der Benutzer einen String in ein Textfeld eingeben kann.
+Der eingegebene Text soll in einem darunterliegenden HTML-Element angezeigt werden (Stichwort Data-Binding).
+Sourcecode hierfür ist im [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html) in der "Forms" Kategorie zu finden.
 
-  1. Füge den gesamten HTML Teil aus dem Cookbook in den markierten Abschnitt in `src/index.html` ein
-  2. Füge aus dem JS Teil lediglich die Zeile, in der das Knockout Observable deklariert wird, in den markierten Abschnitt in `src/js/main.js` ein
+Die Aufgabe gliedert sich in drei Teile:
+
+  1. Deklariere in `src/index.html` ein `input`- und ein `div`-Element, deren Werte durch ein Knockout-Binding an ein Observable gebunden sind
+  2. Deklariere ein Knockout Observable im markierten Abschnitt in `src/js/main.js`
   3. Starte die Anwendung
     - in NetBeans: Klick auf den grünen "Run" Button
     - per Terminal: `grunt serve`
