@@ -64,7 +64,7 @@ function (oj, ko, $) {
   // WORKSHOP_START
   // TODO:
   // WORKSHOP_END
-  // Speichere die statische Router Instanz in einer lokalen Variable
+  // Speichere die Root-Instanz des oj-router in einer lokalen Variable
   // FINAL_START
   var router = oj.Router.rootInstance;
   // FINAL_END

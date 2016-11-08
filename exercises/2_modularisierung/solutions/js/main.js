@@ -56,7 +56,7 @@ require(['ojs/ojcore',
          'ojs/ojrouter',
          'ojs/ojmodule'],
 function (oj, ko, $) {
-  // Speichere die statische Router Instanz in einer lokalen Variable
+  // Speichere die Root-Instanz des oj-router in einer lokalen Variable
   var router = oj.Router.rootInstance;
   // Konfiguriere den Router, sodass die Module 'search' und 'artist' bekannt werden
   router.configure({

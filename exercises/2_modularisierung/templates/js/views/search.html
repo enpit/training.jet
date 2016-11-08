@@ -26,7 +26,13 @@
                 <div class="oj-flex-item artist-name">
                     <div>
                         <button data-bind=" attr: { id: index },
+                                            // WORKSHOP_START
+                                            // TODO: Rufe im click-Handler die 'selectArtist' Funktion des Parent-Moduls auf
+                                            click: alert('clicked'),
+                                            // WORKSHOP_END
+                                            // FINAL_START
                                             click: $parent.selectArtist,
+                                            // FINAL_END
                                             ojComponent: {
                                                 component: 'ojButton',
                                                 label: name

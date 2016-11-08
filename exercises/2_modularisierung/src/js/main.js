@@ -57,7 +57,7 @@ require(['ojs/ojcore',
          'ojs/ojmodule'],
 function (oj, ko, $) {
   // TODO:
-  // Speichere die statische Router Instanz in einer lokalen Variable
+  // Speichere die Root-Instanz des oj-router in einer lokalen Variable
   // Konfiguriere den Router, sodass die Module 'search' und 'artist' bekannt werden
   // Erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
 
