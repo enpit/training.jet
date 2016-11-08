@@ -26,7 +26,7 @@
   "scripts": {
     "copylibs": "grunt bowercopy && grunt build && cpr src/js/libs/ solutions/js/libs --overwrite",
     "generate": "split-guide generate --templates-dir=templates --exercises-dir=src --exercises-final-dir=solutions && npm run copylibs",
-    "generate:solution": "split-guide generate --templates-dir=templates --exercises-dir=_src --exercises-final-dir=src && npm run copylibs",
+    "generate:solution": "cpr src/ src-backup/ --overwrite && split-guide generate --templates-dir=templates --exercises-dir=_src --exercises-final-dir=src && npm run copylibs",
     "postinstall": "bower install && npm run copylibs",
     "start": "grunt serve"
   }
