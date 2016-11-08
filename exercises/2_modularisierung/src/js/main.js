@@ -53,44 +53,17 @@ require(['ojs/ojcore',
          'ojs/ojknockout',
          'ojs/ojtoolbar',
          'ojs/ojbutton',
-         // WORKSHOP_BEGIN
          // TODO: Importiere hier das 'ojs/ojrouter' Modul
-         // WORKSHOP_END
-         // FINAL_BEGIN
-         'ojs/ojrouter',
-         // FINAL_END
          'ojs/ojmodule'],
 function (oj, ko, $) {
-  // WORKSHOP_BEGIN
-  // TODO (Beispiel s. http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=router&demo=simple):
-  // WORKSHOP_END
+  // TODO:
   // Speichere die statische Router Instanz in einer lokalen Variable
-  // FINAL_BEGIN
-  var router = oj.Router.rootInstance;
-  // FINAL_END
   // Konfiguriere den Router, sodass die Module 'search' und 'artist' bekannt werden
-  // FINAL_BEGIN
-  router.configure({
-    'search': {label: 'Suche', isDefault: true},
-    'artist': {label: 'Interpret'},
-    'album': {label: 'Album'},
-    'add-artist': {label: 'Add Artist'}
-  });
-  // FINAL_END
-
-  // Erstelle eine viewModel Variable, deren 'router' Attribute auf den zuvor konfigurierten Router zeigt
-  // FINAL_BEGIN
-  var viewModel = {
-    router: router
-  };
-  // FINAL_END
+  // Erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
 
   $(document).ready(function () {
-    // Rufe ko.applyBindings auf sobald der Router sich synchronisiert hat
-    // FINAL_BEGIN
-    oj.Router.sync().then(function () {
-      ko.applyBindings(viewModel, document.getElementById('page'));
-    });
-    // FINAL_END
+    // TODO:
+    // Rufe ko.applyBindings erst auf sobald der Router sich synchronisiert hat (per Promise)
+    ko.applyBindings(viewModel, document.getElementById('page'));
   });
 });
