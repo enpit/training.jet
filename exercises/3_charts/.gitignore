@@ -1,0 +1,15 @@
+node_modules
+bower_components
+web
+src/js/libs
+themes
+
+hybrid/platforms
+hybrid/www/*
+
+!hybrid/plugins
+hybrid/plugins/*
+!hybrid/plugins/fetch.json
+
+npm-debug.log
+
