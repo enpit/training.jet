@@ -1,51 +1,11 @@
-/**
- * Artist module
+/*
+ * TODO: Erstelle das ArtistViewModel
+ * - definiere ein neues requirejs-Modul, die Abhängigkeiten sind das JET core Modul,
+ *    Knockout, und Knockout-Postbox
+ * - Implementiere die Erstellung eines neuen ViewModels, das von diesem requirejs-Modul
+ *    zurückgegeben wird.
+ *    - Das ViewModel benötigt ein 'artist' Observable. Melde das Observable bei
+ *      knockout-postbox an sodass der initiale Wert des ausgewählten Interpreten
+ *      sowie Änderungen daran in diesem Observable zur Verfügung stehen (2.
+ *      Parameter nicht vergessen damit auch der initiale Wert gelesen wird!)
  */
-define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
-  'ojs/ojchart', 'ojs/ojrouter'],
-  function (oj, ko, $, spotify) {
-    /**
-     * The view model for the Artist module
-     */
-    function ArtistViewModel () {
-      var addAlbumDetails;
-      var isMostPopularAlbum;
-      var self;
-
-      self = this;
-      isMostPopularAlbum = function isMostPopularAlbum (album) {
-        return self.albums().every(function isMostPopular (otherAlbum) {
-          return album.name !== otherAlbum.name ||
-            album.popularity > otherAlbum.items[0];
-        });
-      };
-      addAlbumDetails = function addAlbumDetails (albumId) {
-        spotify.fetchAlbumDetails(albumId).then(
-          function onAlbum (album) {
-            if (isMostPopularAlbum(album)) {
-              self.albums.push({
-                id: album.id,
-                name: album.name,
-                items: [album.popularity]
-              });
-            }
-          }
-        );
-      };
-
-      self.artist = ko.observable().subscribeTo('selectedArtist', true);
-
-      self.albums = ko.observableArray([]);
-
-      spotify.fetchAlbumsByArtist(self.artist().id).then(
-        function onAlbums (response) {
-          response.items.forEach(function (albumSummary) {
-            addAlbumDetails(albumSummary.id);
-          });
-        }
-      );
-    }
-
-
-    return ArtistViewModel;
-  });

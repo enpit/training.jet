@@ -1,22 +1,14 @@
 <div id="artist">
+    <!-- 'with' data-binding zum 'artist' Observable im ViewModel -->
     <div data-bind="with: artist">
+        <!-- Bilds des Interpreten mit if-Abfrage die ReferenceError vermeidet -->
         <div class="cover-container" data-bind="if: images.length > 0">
-            <div role="img" class="artist-image cover" data-bind="style: { backgroundImage: 'url(\'' + cover.url + '\')' }">
+            <div role="img"
+              class="artist-image cover"
+              data-bind="style: { backgroundImage: 'url(\'' + cover.url + '\')' }">
             </div>
         </div>
+        <!-- Name des Interpreten -->
         <h1 data-bind="text: name"></h1>
-    </div>
-    <div id="artistChart" data-bind="ojComponent: {
-            component: 'ojChart',
-            type: 'bar',
-            orientation: 'vertical',
-            stack: 'off',
-            series: albums,
-            groups: ['Popularity'],
-            animationOnDisplay: 'auto',
-            animationOnDataChange: 'auto',
-            hoverBehavior: 'dim',
-            selectionMode: 'none'
-        }" style="max-width:500px;width:100%;height:350px;">
     </div>
 </div>

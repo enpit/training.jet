@@ -1,22 +1,6 @@
-<div id="artist">
-    <div data-bind="with: artist">
-        <div class="cover-container" data-bind="if: images.length > 0">
-            <div role="img" class="artist-image cover" data-bind="style: { backgroundImage: 'url(\'' + cover.url + '\')' }">
-            </div>
-        </div>
-        <h1 data-bind="text: name"></h1>
-    </div>
-    <div id="artistChart" data-bind="ojComponent: {
-            component: 'ojChart',
-            type: 'bar',
-            orientation: 'vertical',
-            stack: 'off',
-            series: albums,
-            groups: ['Popularity'],
-            animationOnDisplay: 'auto',
-            animationOnDataChange: 'auto',
-            hoverBehavior: 'dim',
-            selectionMode: 'none'
-        }" style="max-width:500px;width:100%;height:350px;">
-    </div>
-</div>
+<!-- TODO: Implementiere hier die View des neuen 'artist' Moduls.
+  Erstelle hierfür ein div- oder h1- Element das den Namen des Interpreten anzeigt.
+  Also Bonus kannst du außerdem das Bild und/oder die Alben des Interpreten anzeigen.
+  Tipp: Wenn mehrere Attribute des gleichen Objekts angezeigt werden sollen, ist
+  das 'with' data-binding hilfreich (s. Knockout Dokumentation).
+-->
