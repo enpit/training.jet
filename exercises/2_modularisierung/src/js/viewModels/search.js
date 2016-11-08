@@ -5,12 +5,12 @@ define([
   'ojs/ojcore',
   'knockout',
   'jquery',
-  '../spotify',
-  'knockout-postbox',
+  // TODO: Importiere hier die Module spotify und knockout-postbox ...
   'ojs/ojarraytabledatasource',
   'ojs/ojselectcombobox',
   'ojs/ojlistview'
-], function (oj, ko, $, spotify) {
+// ... und mache das spotify Modul in der Funktion bekannt (knockout-postbox wird autom. an 'ko' gebunden)
+], function (oj, ko, $) {
   /**
    * The view model for the search module
    */
