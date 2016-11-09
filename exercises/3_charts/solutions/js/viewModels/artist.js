@@ -19,10 +19,25 @@ define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
             album.popularity > otherAlbum.items[0];
         });
       };
+
+      /*
+       * Erstelle das 'albums' Observable-Array
+       */
+      self.albums = ko.observableArray([]);
+
       addAlbumDetails = function addAlbumDetails (albumId) {
         spotify.fetchAlbumDetails(albumId).then(
           function onAlbum (album) {
+            /*
+             * Der 'isMostPopularAlbum' Call stellt sicher, dass immer nur das
+             * populärste Album im Array auftaucht, *falls* mehrere Alben mit
+             * dem gleichen Namen existieren (d.h. beugt Duplikaten vor)
+             */
             if (isMostPopularAlbum(album)) {
+              /*
+               * Füge die (relevanten) Daten des Albums als neues Objekt zum
+               * 'albums' Observable-Array hinzu.
+               */
               self.albums.push({
                 id: album.id,
                 name: album.name,
@@ -34,8 +49,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
       };
 
       self.artist = ko.observable().subscribeTo('selectedArtist', true);
-
-      self.albums = ko.observableArray([]);
 
       spotify.fetchAlbumsByArtist(self.artist().id).then(
         function onAlbums (response) {
@@ -50,11 +63,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
         oj.Router.rootInstance.go('album');
       });
     }
-
-    // $("#artistChart").on("ojselectinput", function(event, ui){
-    //   console.log(event);
-
-    // });
 
     return ArtistViewModel;
   });
