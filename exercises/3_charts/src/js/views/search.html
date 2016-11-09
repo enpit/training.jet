@@ -8,33 +8,33 @@
                 options: [],
                 value: query
             }" />
-        <ul id="listview" aria-label="Query results (list of artists)" data-bind="ojComponent: {
-                component: 'ojListView',
-                data: dataSource,
-                selectionMode: 'single',
-                item: {template: 'artist-template'}
-            }">
-        </ul>
+        <!--
+         TODO:
+          Erstelle eine ojListView Komponente, die die Suchergebnisse anzeigt:
+            - die Daten sollen aus dem 'dataSource' Observable des ViewModels
+              bezogen werden
+            - zu Testzwecken kann zuerst auch ein Array mit gemockten Daten
+              eingegeben werden
+            - das template für die Listenelemente soll in einem separaten
+              script-Tag definiert und in dieser Komponente lediglich
+              referenziert werden ('item' Attribut)
+          -->
     </div>
 
+    <!--
+    TODO:
+      Erstelle in diesem Script-Tag das template für die ojListView Komponente:
+        - da es sich bei jedem anzuzeigenden Suchergebnis um ein Listenelement
+          handelt, muss der eigentliche anzuzeigende Inhalt von einem li-Tag
+          umschlossen werden
+        - jedes Listenelement soll einen Button rendern, der mit dem Namen
+          des jeweiligen Interpreten beschriftet ist und bei Klick die
+          'selectArtist' Funktion des SearchViewModels ausführt
+        - als Zwischenschritt bietet es sich an, ein div-Element zu erstellen,
+          welches lediglich den Namen des Interpreten anzeigt
+        - später kann auch noch ein Vorschau-Bild (Thumbnail) neben dem Namen
+          des Interpreten angezeigt werden
+    -->
     <script type="text/html" id="artist-template">
-        <li data-bind="attr: {id: id}">
-            <div class="oj-flex" style="flex-wrap: nowrap">
-                <div class="thumbnail-container" data-bind="if: images.length > 0">
-                    <div role="img" class="artist-image thumbnail" data-bind="style: { backgroundImage: 'url(\'' + thumbnail.url + '\')' }"></div>
-                </div>
-                <div class="oj-flex-item artist-name">
-                    <div>
-                        <button data-bind=" attr: { id: index },
-                                            click: $parent.selectArtist,
-                                            ojComponent: {
-                                                component: 'ojButton',
-                                                label: name
-                                            }">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </li>
     </script>
 </div>
