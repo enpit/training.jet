@@ -1,0 +1,25 @@
+<div id="album" data-bind="ifnot: album().loading">
+  <div data-bind="with: album">
+      <h1 data-bind="text: name"></h1>
+      <div class="cover-container">
+        <div role="img" class="album-image cover" data-bind="style: { backgroundImage: 'url(\'' + cover.url + '\')' }"></div>
+      </div>
+      <div class="album-details">
+        by <span data-bind="text: artist"></span>,
+        released <span data-bind="text: release"></span>
+        (<span data-bind="text: label"></span>)
+      </div>
+  </div>
+  <h2>Tracks:</h2>
+  <div id="albumTracksChart" data-bind="ojComponent: {
+            component: 'ojChart',
+            type: 'pie',
+            series: tracksLength,
+            groups: ['Length (s)'],
+            animationOnDisplay: 'auto',
+            animationOnDataChange: 'auto',
+            hoverBehavior: 'dim'
+        }"
+        style="max-width:500px;width:100%;height:350px;">
+    </div>
+</div>
