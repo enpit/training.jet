@@ -19,7 +19,7 @@ define([
     self.query = ko.observable('');
     self.artists = ko.observableArray([]).syncWith('searchResults', true);
     /*
-    /* TODO:
+     * TODO:
      * Erstelle das dataSource Observable, welches sich mit dem 'artists'
      * Observable-Array synchronisiert.
      */

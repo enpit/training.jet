@@ -26,7 +26,7 @@ define([
     self.artists = ko.observableArray([]).syncWith('searchResults', true);
     /*
     // WORKSHOP_START
-    /* TODO:
+     * TODO:
     // WORKSHOP_END
      * Erstelle das dataSource Observable, welches sich mit dem 'artists'
      * Observable-Array synchronisiert.
