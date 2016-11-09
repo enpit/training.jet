@@ -33,6 +33,7 @@ define(
             cover: response.images[0],
             loading: false
           });
+          console.log(response.name);
           response.tracks.items.forEach(function onTrack (track) {
             /*
              * TODO - Bonus:

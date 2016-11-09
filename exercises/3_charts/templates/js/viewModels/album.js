@@ -33,6 +33,9 @@ define(
             cover: response.images[0],
             loading: false
           });
+          // WORKSHOP_START
+          console.log(response.name);
+          // WORKSHOP_END
           response.tracks.items.forEach(function onTrack (track) {
             // WORKSHOP_START
             /*
