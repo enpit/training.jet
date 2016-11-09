@@ -6,7 +6,18 @@
         </div>
         <h1 data-bind="text: name"></h1>
     </div>
-    <div id="artistChart" data-bind="ojComponent: {
+    <!--
+    // WORKSHOP_START
+     TODO:
+    // WORKSHOP_END
+      Erstelle ein Balkendiagramm das die Alben des zuvor vom Anwender
+      ausgewählten Interpreten anzeigt. Bei Klick auf einen der Balken soll das
+      'selectedAlbums' Array mit dem ausgewählten Album aktualisiert werden,
+      sodass die Navigation zur 'album' View ausgeführt werden kann.
+      -->
+    // FINAL_START
+    <div id="artistChart"
+        data-bind="ojComponent: {
             component: 'ojChart',
             type: 'bar',
             orientation: 'vertical',
@@ -18,6 +29,8 @@
             hoverBehavior: 'dim',
             selectionMode: 'single',
             selection: selectedAlbums
-        }" style="max-width:500px;width:100%;height:350px;">
+        }"
+        style="max-width:500px;width:100%;height:350px;">
     </div>
+    // FINAL_END
 </div>
