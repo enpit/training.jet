@@ -34,11 +34,13 @@ define(
             loading: false
           });
           response.tracks.items.forEach(function onTrack (track) {
-            self.tracksLength.push({
-              id: track.id,
-              name: track.name,
-              items: [Number(track.duration_ms) / 1000]
-            });
+            /*
+             * TODO - Bonus:
+             * Je nach Wunsch kann hier statt der Track-Dauer ein anderes Attribut
+             * des Tracks in 'track.items' gespeichert werden.
+             */
+            track.items = [Number(track.duration_ms) / 1000];
+            self.tracksLength.push(track);
           });
         }
       );

@@ -34,11 +34,8 @@ define(
             loading: false
           });
           response.tracks.items.forEach(function onTrack (track) {
-            self.tracksLength.push({
-              id: track.id,
-              name: track.name,
-              items: [Number(track.duration_ms) / 1000]
-            });
+            track.items = [Number(track.duration_ms) / 1000];
+            self.tracksLength.push(track);
           });
         }
       );
