@@ -1,27 +1,33 @@
 {
-  "name": "enpit-spotify-explorer",
+  "name": "enpit.jet-workshop.modularisierung",
   "version": "1.0.0",
-  "description": "Sample oraclejet app that allows the user to search some of spotify's database",
+  "description": "enpit JET Workshop, Part 3: Charts",
   "author": {
-    "name": "enpit GmbH & Co. KG",
+    "name": "enpit",
     "email": "info@enpit.de",
-    "homepage": "http://www.enpit.de"
-  },
-  "scripts": {
-    "start": "grunt oraclejet-serve"
+    "website": "http://www.enpit.de"
   },
   "devDependencies": {
-    "eslint": "^3.7.1",
-    "eslint-config-google": "^0.6.0",
+    "cpr": "^2.0.0",
     "grunt": "^1.0.1",
     "grunt-bowercopy": "1.2.4",
-    "grunt-eslint": "^19.0.0",
     "grunt-oraclejet": "~1.1.0",
     "load-grunt-config": "0.19.2",
-    "oraclejet-tooling": "~1.1.0"
+    "oraclejet-tooling": "~1.1.0",
+    "split-guide": "^1.1.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "split-guide": "^1.0.0"
+  },
+  "scripts": {
+    "copylibs": "grunt bowercopy && grunt build && cpr src/js/libs/ solutions/js/libs --overwrite",
+    "generate": "split-guide generate --templates-dir=templates --exercises-dir=src --exercises-final-dir=solutions && npm run copylibs",
+    "generate:solution": "cpr src/ src-backup/ --overwrite && split-guide generate --templates-dir=templates --exercises-dir=_src --exercises-final-dir=src && npm run copylibs",
+    "postinstall": "bower install && npm run copylibs",
+    "start": "grunt serve"
+  }
 }
