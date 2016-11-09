@@ -7,9 +7,8 @@ define([
   'jquery',
   '../spotify',
   'knockout-postbox',
-  'ojs/ojarraytabledatasource',
   'ojs/ojselectcombobox',
-  'ojs/ojlistview'
+  // TODO: Importiere die fehlenden JET Module für ListView und ArrayTableDataSource
 ], function (oj, ko, $, spotify) {
   /**
    * The view model for the search module
@@ -19,8 +18,12 @@ define([
 
     self.query = ko.observable('');
     self.artists = ko.observableArray([]).syncWith('searchResults', true);
-    self.dataSource = new oj.ArrayTableDataSource(
-      self.artists, {idAttribute: "id"});
+    /*
+    /* TODO:
+     * Erstelle das dataSource Observable, welches sich mit dem 'artists'
+     * Observable-Array synchronisiert.
+     */
+
     self.selectedArtist = ko.observable({
       // mock an artist s.t. the artist ViewModel does not crash
       images: []
