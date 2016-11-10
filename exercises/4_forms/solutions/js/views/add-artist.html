@@ -38,8 +38,9 @@
                       definiert ist
                 -->
                 <label for="genreControl">Genre:</label>
-                <select id="genreControl" required data-bind="ojComponent: {
+                <select id="genreControl" data-bind="ojComponent: {
                     component: 'ojSelect',
+                    required: true,
                     value: genre,
                     validator: [noDefault]
                 }">
@@ -69,7 +70,7 @@
                     required: false,
                     invalidComponentTracker: tracker,
                     max: 2016,
-                    min: 1800,
+                    min: 1000,
                     converter: {
                         type: 'number',
                         options: {
