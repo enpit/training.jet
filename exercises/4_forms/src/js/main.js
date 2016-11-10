@@ -59,11 +59,12 @@ function (oj, ko, $) {
     'add-artist': {label: 'Add Artist'}
   });
 
-  ko.postbox.subscribe('add-artist', function onAddArtist (newArtist) {
-    // normally, you would save the artist to a database (e.g. via REST call)
-    // for now, just print the artist to the user
-    alert(JSON.stringify(newArtist));
-  });
+  /*
+   * TODO:
+   * An dieser Stelle sollen exemplarisch die gemachten Eingaben aus dem
+   * 'add-artist' Modul per knockout-postbox abonniert werden. Für unsere Zwecke
+   * reicht es aus, hier das erstelle Objeckt per `alert` auszugeben.
+   */
 
   var viewModel = {
     router: router
