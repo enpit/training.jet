@@ -3,18 +3,40 @@
     <div class="oj-form">
         <div class="oj-flex">
             <div class="oj-flex-item">
+                <!--
+                  Teil 1: Erstelle ein input-Element und ein zugehöriges Label
+                    für den Namen des Interpreten, der Wert soll mit dem 'name'
+                    Observable synchronisiert werden.
+                  Teil 2: Füge Validierung für das input-Element hinzu
+                    - leere Werte sind nicht erlaubt
+                    - das 'tracker' Observable speichert den Status der Validierung
+                  -->
                 <label for="nameControl">Name:</label>
-                <input id="nameControl" required placeholder="Name des Interpreten" data-bind="ojComponent: {
-                    component: 'ojInputText',
-                    value: name,
-                    required: true,
-                    invalidComponentTracker: tracker,
-                    rootAttributes: {style:'max-width:100%'}
-                }">
+                <input id="nameControl"
+                    placeholder="Name des Interpreten"
+                    data-bind="ojComponent: {
+                        component: 'ojInputText',
+                        value: name,
+                        required: true,
+                        invalidComponentTracker: tracker,
+                        rootAttributes: {style:'max-width:100%'}
+                    }
+                ">
             </div>
         </div>
         <div class="oj-flex">
             <div class="oj-flex-item">
+                <!--
+                  Teil 1: Erstelle ein select-Element und ein zugehöriges Label
+                    für das Genre des Interpreten, der Wert soll mit dem 'genre'
+                    Observable synchronisiert werden. Definiere mindestens drei
+                    Genres aus denen der User wählen kann.
+                  Teil 2 (Bonus): Füge Validierung für das select-Element hinzu
+                    - füge zunächst eine default-Option hinzu, die mit "Bitte
+                      wählen" beschrieben ist
+                    - referenziere den custom validator, der im ViewModel
+                      definiert ist
+                -->
                 <label for="genreControl">Genre:</label>
                 <select id="genreControl" required data-bind="ojComponent: {
                     component: 'ojSelect',
@@ -28,13 +50,25 @@
             </select>
             </div>
             <div class="oj-flex-item">
+                <!--
+                  Teil 1: Erstelle ein input-Element und ein zugehöriges Label
+                    für das Gründungsjahr des Interpreten, der Wert - dieses mal
+                    eine Zahl und nicht nur Text - soll mit dem 'year' Observable
+                    synchronisiert werden.
+                  Teil 2: Füge Validierung für das input-Element hinzu
+                    - leere Werte sind nicht erlaubt
+                    - eine Ober- und Untergrenze verhindert unrealistische Eingaben
+                    - das 'tracker' Observable speichert den Status der Validierung
+                  Teil 3 (Bonus): Füge einen Converter hinzu, der Nachkommastellen rundet.
+                -->
+                // FINAL_START
                 <label for="yearControl">Gründungsjahr:</label>
                 <input id="yearControl" data-bind="ojComponent: {
                     component: 'ojInputNumber',
                     value: year,
                     required: false,
                     invalidComponentTracker: tracker,
-                    max: 2050,
+                    max: 2016,
                     min: 1800,
                     converter: {
                         type: 'number',
@@ -50,12 +84,19 @@
         </div>
         <div class="oj-flex">
             <div class="oj-flex-item">
+                <!--
+                  Teil 1: Füge einen Button hinzu, der bei Klick die 'save'
+                    Funktion des ViewModels aufruft. Für das Alta-UI Design
+                    müssen bestimmte CSS Klassen gesetzt werden.
+                  Teil 2: Referenziere die 'shouldDisableAdd' Funktion damit der
+                    Button nicht klickbar ist wenn Fehler im Formular auftreten.
+                -->
                 <button id="add-artist-button" class="oj-button oj-button-confirm" data-bind="click: save, ojComponent: {
                     component: 'ojButton',
                     label: 'Speichern',
                     disabled: shouldDisableAdd()
                 }">
-            </button>
+                </button>
             </div>
         </div>
     </div>
