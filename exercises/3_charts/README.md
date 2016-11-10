@@ -2,7 +2,6 @@
 
 In dieser dritten Hands-On Session wird erneut die [Spotify-Explorer](https://github.com/enpit/jet-spotify-explorer/) App weiterentwickelt (bzw. zuvor bereits genutzte Features müssen nun von den Schulungsteilnehmern implementiert werden).
 Bei dieser Session dreht sich alles um die Visualisierung von Daten, insbesondere mit Listen und Diagrammen.
-Außerdem werden die Grundlagen des Flexbox Layout Moduls vermittelt.
 
 ## Vorbereitung
 
@@ -46,9 +45,6 @@ Tipp: Es bietet sich oft an, die Aufgaben in kleinere Zwischenschritte aufzuteil
 ## Referenzen:
 
 - [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html)
-- Flexbox:
-  - [Flexbox @ Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-  - [Flexbox @ Oracle JET](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=flex&demo=basics)
 - [Spotify Web API](https://developer.spotify.com/web-api/console/)
 - [knockout-postbox](https://github.com/rniemeyer/knockout-postbox)
 

@@ -1,25 +1,37 @@
-# jet-spotify-explorer
-Explore Spotify's music database using this JET webapp. Sample app for our JET workshop.
+# Hands-On Session 4
 
-## Prerequsites
+In dieser vierten und letzten Hands-On Session wird die [Spotify-Explorer](https://github.com/enpit/jet-spotify-explorer/) App fertig gestellt.
+Die Teilnehmer erstellen ein Formular, das dem Nutzer erlaubt einen neuen Interpreten hinzuzufügen.
+So werden Konzepte wie Formularerstellung und -validierung vermittelt.
+Außerdem werden die Grundlagen des Flexbox Layout Moduls vermittelt.
 
-* npm
-* bower
-* grunt-cli
+## Vorbereitung
 
-## Get started
+Um diese Übung durchführen zu können müssen (am besten bereits vor der Schulung) einmalig im heruntergeladenen Repository folgende Kommandos ausgeführt werden:
 
-If you haven't already, run `npm install --global bower grunt-cli`. Then:
-
-```
-git clone https://github.com/enpit/jet-spotify-explorer
-npm i
-bower install
-grunt bowercopy
-grunt build
+``` cmd
+$ cd exercises/4_forms
+$ npm install
 ```
 
-## Run
-```
-npm start
-```
+## Lernziel
+
+...
+
+## Aufgaben
+
+  1. *TODO*
+  2. Starte die Anwendung
+    - in NetBeans: Klick auf den grünen "Run" Button
+    - per Terminal: `grunt serve`
+
+## Referenzen:
+
+- [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html)
+- Flexbox:
+  - [Flexbox @ Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+  - [Flexbox @ Oracle JET](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=flex&demo=basics)
+
+## Lösung
+
+Die Lösung wir gegen Ende der Hands-On Session kurz besprochen und ist außerdem im Ordner `solutions` zu finden.
