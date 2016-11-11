@@ -20,7 +20,7 @@ requirejs.config(
     paths:
     //injector:mainReleasePaths
     {
-      'knockout': 'libs/knockout/knockout-3.4.0.debug',
+      'knockout': 'libs/knockout/knockout-3.4.1.debug',
       'jquery': 'libs/jquery/jquery-3.1.0',
       'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
       'promise': 'libs/es6-promise/es6-promise',
