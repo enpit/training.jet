@@ -27,7 +27,7 @@ define([
      */
     // FINAL_START
     self.name = ko.observable('');
-    self.genre = ko.observableArray(['rock']);
+    self.genre = ko.observableArray(['default']);
     self.year = ko.observable(new Date().getFullYear());
     // FINAL_END
 

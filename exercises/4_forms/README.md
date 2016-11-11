@@ -22,7 +22,7 @@ Dem Teilnehmer sollen die Konzepte für das Erstellen und Validieren von Formula
     - erstelle das 'name' input-Element, welches die Eingabe eines beliebigen
     Strings erlaubt und diesen im 'name' Observable speichert
     - erstelle das 'genre' select-Element; hier kann das Genre ausgewählt werden, der Wert wird im 'genre' Observable abspeichert
-    - das dritte zu erstellende Element ist ein input-Element für das Gründungsjahr des Interpreten; hier sind als Eingaben nur Zahlen erlaubt, der Wert wird mit dem 'year' Observable synchronisiert
+    - das dritte zu erstellende Element ist ein Input Number-Element für das Gründungsjahr des Interpreten; hier sind als Eingaben nur Zahlen erlaubt, der Wert wird mit dem 'year' Observable synchronisiert
     - außerdem wird ein Button zum Speichern der Daten benötigt, erstelle diesen Button und rufe beim Klick die 'save' Funktion aus dem ViewModel auf
     - für alle Controls sollten außerdem Label erstellt werden
   2. Implementiere die nötigen Observables und die 'save' Funktion im ViewModel (`add-artist.js`):

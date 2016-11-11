@@ -23,7 +23,7 @@ define([
      * speichern. Für das Genre wird ein Observable-Array benötigt.
      */
     self.name = ko.observable('');
-    self.genre = ko.observableArray(['rock']);
+    self.genre = ko.observableArray(['default']);
     self.year = ko.observable(new Date().getFullYear());
 
     /*
