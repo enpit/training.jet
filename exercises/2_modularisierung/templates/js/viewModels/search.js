@@ -9,7 +9,7 @@ define([
   // TODO: Importiere hier die Module spotify und knockout-postbox ...
   // WORKSHOP_END
   // FINAL_START
-  '../spotify',
+  'spotify',
   'knockout-postbox',
   // FINAL_END
   'ojs/ojarraytabledatasource',
@@ -21,7 +21,7 @@ define([
 // WORKSHOP_END
 // FINAL_START
 ], function (oj, ko, $, spotify) {
-// FINAL_END{
+// FINAL_END
   /**
    * The view model for the search module
    */

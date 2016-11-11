@@ -5,7 +5,7 @@ define([
   'ojs/ojcore',
   'knockout',
   'jquery',
-  '../spotify',
+  'spotify',
   'knockout-postbox',
   'ojs/ojarraytabledatasource',
   'ojs/ojselectcombobox',

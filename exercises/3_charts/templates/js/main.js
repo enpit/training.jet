@@ -31,7 +31,8 @@ requirejs.config(
       'ojtranslations': 'libs/oj/v2.1.0/resources',
       'text': 'libs/require/text',
       'signals': 'libs/js-signals/signals',
-      'knockout-postbox': 'libs/knockout-postbox/knockout-postbox'
+      'knockout-postbox': 'libs/knockout-postbox/knockout-postbox',
+      'spotify': 'spotify'
     }
     //endinjector
     ,
