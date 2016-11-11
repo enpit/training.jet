@@ -8,7 +8,8 @@ body {
 }
 
 .appheader-logo-enpit:before {
-  content: url("images/enpit_logo_rgb_130x.png");
+  /* use url to logo on github because split-guide messes up the image file when copying it to the src directory */
+  content: url("https://raw.githubusercontent.com/enpit/jet-spotify-explorer/master/src/css/images/enpit_logo_rgb_130x.png");
 }
 
 .oj-web-applayout-header-title {
