@@ -31,7 +31,8 @@ Dem Teilnehmer sollen die Konzepte für das Erstellen und Validieren von Formula
     - das Gründungsjahr des Interpreten darf nicht in der Zukunft liegen und nicht vor 1000 sein
     - der Nutzer darf nicht in der Lage sein das Formular abzusenden solange nicht alle Eingaben korrekt sind
   4. Für die Validierung ist außerdem ein `InvalidComponentTracker` notwending, der den Status der Validierung für alle Controls verwaltet. Erstelle ein einfaches Observable hierfür (`add-artist.js`)
-  5. (Bonus) Wenn noch Zeit ist, kann eine Custom-Validierung für die Genreauswahl implementiert werden (`add-artist.html` & `add-artist.js`) und / oder ein Converter geschrieben werden der das Gründungsjahr auf ganze Zahlen rundet (`add-artist.html`)
+  5. (Bonus) Wenn noch Zeit ist, kann eine Cus
+  tom-Validierung für die Genreauswahl implementiert werden (`add-artist.html` & `add-artist.js`) und / oder ein Converter geschrieben werden der das Gründungsjahr auf ganze Zahlen rundet (`add-artist.html`)
   6. Starte die Anwendung
     - in NetBeans: Klick auf den grünen "Run" Button
     - per Terminal: `grunt serve`
@@ -43,4 +44,4 @@ Dem Teilnehmer sollen die Konzepte für das Erstellen und Validieren von Formula
 
 ## Lösung
 
-Die Lösung wir gegen Ende der Hands-On Session kurz besprochen und ist außerdem im Ordner `solutions` zu finden.
+Die Lösung wir gegen Ende der Hands-On Session kurz besprochen und ist außerdem im Ordner `solutions` sowie als [Live-Demo auf Github](https://enpit.github.io/jet-spotify-explorer/web/) zu finden.
