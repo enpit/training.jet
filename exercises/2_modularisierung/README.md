@@ -48,4 +48,4 @@ Hinweis: Die Dateien `header.js` und `header.html` müssen nicht angepasst werde
 
 ## Lösung
 
-Die Lösung wir gegen Ende der Hands-On Session kurz besprochen und ist außerdem im Ordner `solutions` zu finden.
+Die Lösung wir gegen Ende der Hands-On Session kurz besprochen und ist außerdem im Ordner `solutions` sowie als [Live-Demo auf Github](https://enpit.github.io/jet-spotify-explorer/web/) zu finden.
