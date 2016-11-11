@@ -1,7 +1,9 @@
+<!-- Referenz auf Attribut des im Observable hinterlegten Objekts: -->
+<!-- <h1 data-bind="text: artist().name"></h1> -->
 <div id="artist">
     <!-- 'with' data-binding zum 'artist' Observable im ViewModel -->
     <div data-bind="with: artist">
-        <!-- Bilds des Interpreten mit if-Abfrage die ReferenceError vermeidet -->
+        <!-- Bild des Interpreten mit if-Abfrage die ReferenceError vermeidet -->
         <div class="cover-container" data-bind="if: images.length > 0">
             <div role="img"
               class="artist-image cover"

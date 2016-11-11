@@ -25,6 +25,11 @@
                 </div>
                 <div class="oj-flex-item artist-name">
                     <div>
+                        <!--
+                          Rufe im click-Handler die 'selectArtist' Funktion des Parent-Moduls auf.
+                          Entferne hierfür den 'alert' Aufruf und referenziere stattdessen mithilfe
+                          von $parent die entsprechende Funktion des SearchViewModels.
+                        -->
                         <button data-bind=" attr: { id: index },
                                             click: $parent.selectArtist,
                                             ojComponent: {
