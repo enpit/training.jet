@@ -27,7 +27,8 @@ requirejs.config(
       'ojtranslations': 'libs/oj/v2.1.0/resources',
       'text': 'libs/require/text',
       'signals': 'libs/js-signals/signals',
-      'knockout-postbox': 'libs/knockout-postbox/knockout-postbox'
+      'knockout-postbox': 'libs/knockout-postbox/knockout-postbox',
+      'spotify': 'spotify'
     }
     //endinjector
     ,
@@ -54,12 +55,15 @@ require(['ojs/ojcore',
 function (oj, ko, $) {
   // TODO:
   // Speichere die Root-Instanz des oj-router in einer lokalen Variable
-  // Konfiguriere den Router, sodass die Module 'search' und 'artist' bekannt werden
+  // Konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
+  //                                        und 'artist' (Label: Interpret) bekannt werden.
+  // Es sind keine weiteren Attribute wie z.B. Value erforderlich.
   // Erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
 
   $(document).ready(function () {
     // TODO:
-    // Rufe ko.applyBindings erst auf sobald der Router sich synchronisiert hat (per Promise)
+    // Rufe ko.applyBindings erst auf sobald der Router sich synchronisiert hat 
+    // (siehe  ggf nochmals in cookbook Simple Router Beispiel)
     ko.applyBindings(viewModel, document.getElementById('page'));
   });
 });

@@ -18,6 +18,8 @@ Die Schulungsteilnehmer sollen nach Abschluss dieser Session in der Lage sein, d
 
 ## Aufgaben
 
+Als Vorbereitung sollte das Simple-Router-Beispiel aus Cookbook angeschaut werden: http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=router&demo=simple
+
   1. Konfiguriere in `index.html` an der markierten Stelle ein Data-Binding, sodass das div-Element immer die View anzeigt die im Router gerade aktiv ist
   2. In `main.js`:
     - importiere die fehlenden Module
@@ -26,6 +28,7 @@ Die Schulungsteilnehmer sollen nach Abschluss dieser Session in der Lage sein, d
     - synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
   3. In `search.js` und `search.html`:
     - importiere auch hier die fehlenden Module und mache das 'spotify'-Modul im Body des Moduls bekannt
+    - In der `search.html`-View den Click-Handler wie folgt erweitern: 'selectArtist' Funktion des Parent-Moduls 
     - stoße in der `selectArtist`-Funktion die Navigation des Routers zur 'artist' View an
   4. In `artist.js` und `artist.html` - hier muss ein komplettes neues Modul aufgezogen werden:
     - zeige in der View den Namen des Interpreten an
