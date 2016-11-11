@@ -1,4 +1,4 @@
-# enpit.training.jet (im Aufbau)
+# enpit.training.jet
 
 Materialien für den [DOAG 2016 Schulungstag "Durchstarten mit Oracle JET" am 18.11.2016](http://2016.doag.org/de/programm/schulungstag/#tab-9929-1).
 
@@ -13,6 +13,7 @@ Die Hands-On Sessions orientieren sich an unserer Beispielanwendung [Spotify-Exp
 - Ausreichend freien Festplattenplatz
 
 ## Vorbereitung vor dem Workshop
+
 1. [Git](https://git-scm.com/) installieren bzw. [Git Bash](https://git-for-windows.github.io/) für Windows-User
 2. [node.js](https://nodejs.org/en/) Version 4 oder 6 installieren
 3. Grunt CLI und Bower per Kommandozeile installieren: `npm install --global grunt-cli bower`
@@ -23,8 +24,10 @@ Die Hands-On Sessions orientieren sich an unserer Beispielanwendung [Spotify-Exp
 7. Per Kommandozeile im Root-Verzeichnis dieses Projektes die benötigten Module installieren: `npm install`
 
 ## Installation überprüfen
+
 Folgende Befehle müssen funktionieren:
-```
+
+``` cmd
 $ git --version
 git version 2.8.4 (oder höher)
 $ node -v
@@ -34,6 +37,7 @@ $ npm -v
 ```
 
 ## Die Anwendung starten
+
 In der Kommandozeile in das Root-Verzeichnis dieses Projektes navigieren
 
 1. `grunt build` ausführen
