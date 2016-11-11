@@ -48,10 +48,10 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
         var self = this;
 
         /*
-         * Erstelle ein Knockout Observable mit dem Namen 'value' und
-         * setze dessen Text auf 'Hallo DOAG2016'
+         * Erstelle ein Knockout Observable mit dem Namen 'vorname' und
+         * setze ihn z.B. auf 'DOAG2016'
          */
-        self.value = ko.observable('Hallo DOAG2016');
+        self.vorname = ko.observable('DOAG2016');
       }
       var viewModel, element;
       // Hole das div-Element mit der ID 'workshop' aus dem DOM:

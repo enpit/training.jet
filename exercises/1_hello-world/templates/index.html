@@ -47,18 +47,18 @@
     // WORKSHOP_START
     <!--
         TODO (Beispielcode s. Cookbook):
-          - erstelle eine ojInputText Komponente mit Data-Binding zum 'value' Observable
-          - erstelle ein zugehöriges Label
-          - erstelle ein span-Element das ebenfalls ein Data-Binding zum 'value' Observable hat
+          - erstelle eine ojInputText Komponente mit Data-Binding zu einem 'vorname' Observable
+          - erstelle ein zugehöriges Label mit: Vorname
+          - erstelle ein span-Element das ebenfalls ein Data-Binding zum 'vorname' Observable hat
       -->
     // WORKSHOP_END
     // FINAL_START
-    <label for="text-input">ojInputText component</label>
+    <label for="text-input">Vorname</label>
     <input id="text-input" type="text" data-bind="ojComponent: {component: 'ojInputText',
-                              value: value}" />
+                              value: vorname}" />
     <br/><br/>
-    <span class="oj-label">Current component value is: </span>
-    <span data-bind="text: value"></span>
+    <span class="oj-label">Hallo </span>
+    <span data-bind="text: vorname"></span>
     // FINAL_END
     <script type="text/javascript" data-main="js/main" src="js/libs/require/require.js"></script>
 

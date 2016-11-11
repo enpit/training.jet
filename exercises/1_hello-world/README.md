@@ -25,7 +25,7 @@ Sourcecode hierfür ist im [Cookbook](http://www.oracle.com/webfolder/technetwor
 
 Die Aufgabe gliedert sich in drei Teile:
 
-  1. Deklariere in `src/index.html` ein `input`- und ein `div`-Element, deren Werte durch ein Knockout-Binding an ein Observable gebunden sind
+  1. Deklariere in `src/index.html` ein `input`- und ein `span`-Element, deren Werte durch ein Knockout-Binding an ein Observable gebunden sind
   2. Deklariere ein Knockout Observable im markierten Abschnitt in `src/js/main.js`
   3. Starte die Anwendung
     - in NetBeans: Klick auf den grünen "Run" Button
