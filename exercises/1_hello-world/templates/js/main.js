@@ -55,11 +55,11 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
         // WORKSHOP_START
          * TODO (Beispielcode im Cookbook):
         // WORKSHOP_END
-         * Erstelle ein Knockout Observable mit dem Namen 'value' und
-         * setze dessen Text auf 'Hallo DOAG2016'
+         * Erstelle ein Knockout Observable mit dem Namen 'vorname' und
+         * setze ihn z.B. auf 'DOAG2016'
          */
         // FINAL_START
-        self.value = ko.observable('Hallo DOAG2016');
+        self.vorname = ko.observable('DOAG2016');
         // FINAL_END
       }
       var viewModel, element;
