@@ -33,4 +33,4 @@ Die Aufgabe gliedert sich in drei Teile:
 
 ## Lösung
 
-Die Lösung wir gegen Ende der Hands-On Session kurz besprochen und ist außerdem im Ordner `solutions` zu finden.
+Die Lösung wird gegen Ende der Hands-On Session kurz besprochen und ist außerdem im Ordner `solutions` zu finden.
