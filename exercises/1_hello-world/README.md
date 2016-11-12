@@ -19,15 +19,19 @@ Etwaige Probleme mit der Arbeitsumgebung können an dieser Stelle ebenfalls erka
 
 ## Aufgaben
 
+> **Hinweis**: Die zu bearbeitenden Dateien befinden sich im `src` Ordner.
+> Zu erledigende Aufgaben sind mit *TODO X* Kommentaren gekennzeichnet (X = Nummer der Aufgabe in dieser Readme-Datei).
+> Der Code ist desweiteren mit sowohl englischen als auch deutschen Kommentaren versehen; erstere sind offiziellen Codebeispielen oder Templates von Oracle entnommen, letztere stammen von uns.
+
+### Hello World
+
 Schreibe eine Anwendung in der der Benutzer einen String in ein Textfeld eingeben kann.
 Der eingegebene Text soll in einem darunterliegenden HTML-Element angezeigt werden (Stichwort Data-Binding).
-Sourcecode hierfür ist im [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html) in der "Forms" Kategorie zu finden.
-
-Die Aufgabe gliedert sich in drei Teile:
+Sourcecode hierfür ist im [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=textInput&demo=text) zu finden, muss aber noch angepasst werden.
 
   1. Deklariere in `src/index.html` ein `input`- und ein `span`-Element, deren Werte durch ein Knockout-Binding an ein Observable gebunden sind
   2. Deklariere ein Knockout Observable im markierten Abschnitt in `src/js/main.js`
-  3. Starte die Anwendung
+  3. Starte die Anwendung    
     - in NetBeans: Klick auf den grünen "Run" Button
     - per Terminal: `grunt serve`
 

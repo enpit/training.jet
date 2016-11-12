@@ -49,9 +49,9 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
 
         /*
         // WORKSHOP_START
-         * TODO (Beispielcode im Cookbook):
+         * TODO 2: Deklariere ein Knockout Observable
         // WORKSHOP_END
-         * Erstelle ein Knockout Observable mit dem Namen 'vorname' und
+         * - erstelle ein Knockout Observable mit dem Namen 'vorname' und
          * setze ihn z.B. auf 'DOAG2016'
          */
         // FINAL_START
