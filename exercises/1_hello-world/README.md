@@ -21,7 +21,9 @@ Etwaige Probleme mit der Arbeitsumgebung können an dieser Stelle ebenfalls erka
 
 > **Hinweis**: Die zu bearbeitenden Dateien befinden sich im `src` Ordner.
 > Zu erledigende Aufgaben sind mit *TODO X* Kommentaren gekennzeichnet (X = Nummer der Aufgabe in dieser Readme-Datei).
-> Der Code ist desweiteren mit sowohl englischen als auch deutschen Kommentaren versehen; erstere sind offiziellen Codebeispielen oder Templates von Oracle entnommen, letztere stammen von uns.
+> Der Code ist desweiteren mit sowohl englischen als auch deutschen Kommentaren versehen.
+> Englische Kommentare sind offiziellen Codebeispielen oder Templates von Oracle entnommen, oder entstammen dem Spotify-Explorer Projekt.
+> Deutsche Kommentare sind eigens für die Schulung erstellt worden.
 
 ### Hello World
 
