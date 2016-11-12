@@ -20,12 +20,18 @@ In einer Bonusaufgabe können außerdem weitere Visualisierungsmöglichkeiten au
 
 ## Aufgaben
 
-  1. Stelle die Suchergebnisse in einer [ListView](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=listView&demo=observableArrayListView) dar:
-    - importiere die nötigen Module (`search.js`)
-    - erstelle die benötigte Datenquelle als Observable-Array im ViewModel (`search.js`)    
-    - erstelle eine ojListView Komponente (`search.html`)
-    - erstelle das Template für die Listenelemente (dies sollte zumindest einen Button mit dem Namen des Interpreten rendern) (`search.html`)
-    - per Klick auf den Button soll zur 'artist' View navigiert werden (`search.html`)
+### I. Darstellung der Suchergebnisse
+
+Stelle die Suchergebnisse in einer [ListView](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=listView&demo=observableArrayListView) dar.
+
+ 1. importiere die nötigen Module (`search.js`)
+ 2. erstelle die benötigte Datenquelle als Observable-Array im ViewModel (`search.js`)    
+ 3. erstelle eine ojListView Komponente (`search.html`)
+ 4. erstelle das Template für die Listenelemente (dies sollte zumindest einen Button mit dem Namen des Interpreten rendern) (`search.html`)
+ 5. per Klick auf den Button soll zur 'artist' View navigiert werden (`search.html`)
+
+Ergebnis: Der Anwender kann die Suchergebnisse ansehen, ein Klick auf den Button eines Interpreten löst die Navigation zur *artist* View an; die *artist* View ansich ist noch leer.
+
   2. Visualisiere die Alben des gewählten Interpreten:
     - erstelle die benötigte Datenquelle als Observable-Array im ViewModel (`artist.js`)
     - füge die von der Spotify Web API zurückgegebenen Album-Details zur Datenquelle hinzu (`artist.js`) (Datenstruktur TODO)
