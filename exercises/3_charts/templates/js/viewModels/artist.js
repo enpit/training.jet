@@ -76,7 +76,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
        * - veröffentliche die Daten dieses Arrays per knockout-postbox unter dem Key 'selectedAlbums'
        * - wenn der User ein Element im Diagramm anklickt, soll ein Click-Handler
        *    aufgerufen werden der die Navigation zur 'album' View ausführt
-       *    (Hinweis: Ebenfalls per knockout-postbox lösbar)
+       *    (Hinweis: Das ist mithilfe von Knockouts 'subscribe' Funktion lösbar)
        */
       // FINAL_START
       self.selectedAlbums = ko.observableArray([]).publishOn('selectedAlbums');
