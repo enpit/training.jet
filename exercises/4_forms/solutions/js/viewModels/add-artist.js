@@ -33,18 +33,6 @@ define([
     self.tracker = ko.observable();
 
     /*
-     * Erstelle die 'validate' Funktion um das Genre-Control zu validieren (der
-     * gewählte Wert darf nicht der default-Wert sein). Die Funktion muss in ein
-     * Objekt eingeschlossen werden, welches dann von im 'validators' Attribut
-     * in der View referenziert wird.
-     */
-    self.noDefault = {
-      validate: function validate (value) {
-        return value !== 'default';
-      }
-    };
-
-    /*
      * Die hier bereits vorhandenen 'shouldDisableAdd' und 'isValid' Funktionen
      * implementieren die Logik für das automatische Deaktivieren des
      * Submit-Buttons.
@@ -90,14 +78,16 @@ define([
       var trackerObj = ko.utils.unwrapObservable(self.tracker);
       if (isValid(trackerObj)) {
         /*
-         * Veröffentliche die gemachten Eingaben per knockout-postbox unter dem
-         * Key 'add-artist' und stoße die Navigation zurück zur Search View an.
+         * - Logge die gemachten Eingaben per console.log o.ä. (Beispiel für einen
+         * API-Call)
+         * - stoße die Navigation zurück zur vorherigen View an.
          */
-        ko.postbox.publish('add-artist', {
+        var data = {
           name: self.name(),
           genre: self.genre()[0],
           year: self.year()
-        });
+        };
+        console.log(JSON.stringify(data));
         window.history.back();
       }
     };

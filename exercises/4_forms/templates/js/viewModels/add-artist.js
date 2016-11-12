@@ -43,23 +43,6 @@ define([
     // FINAL_END
 
     /*
-    // WORKSHOP_START
-     * TODO (Bonus):
-    // WORKSHOP_END
-     * Erstelle die 'validate' Funktion um das Genre-Control zu validieren (der
-     * gewählte Wert darf nicht der default-Wert sein). Die Funktion muss in ein
-     * Objekt eingeschlossen werden, welches dann von im 'validators' Attribut
-     * in der View referenziert wird.
-     */
-    // FINAL_START
-    self.noDefault = {
-      validate: function validate (value) {
-        return value !== 'default';
-      }
-    };
-    // FINAL_END
-
-    /*
      * Die hier bereits vorhandenen 'shouldDisableAdd' und 'isValid' Funktionen
      * implementieren die Logik für das automatische Deaktivieren des
      * Submit-Buttons.
@@ -108,15 +91,17 @@ define([
         // WORKSHOP_START
          * TODO:
         // WORKSHOP_END
-         * Veröffentliche die gemachten Eingaben per knockout-postbox unter dem
-         * Key 'add-artist' und stoße die Navigation zurück zur Search View an.
+         * - Logge die gemachten Eingaben per console.log o.ä. (Beispiel für einen
+         * API-Call)
+         * - stoße die Navigation zurück zur vorherigen View an.
          */
         // FINAL_START
-        ko.postbox.publish('add-artist', {
+        var data = {
           name: self.name(),
           genre: self.genre()[0],
           year: self.year()
-        });
+        };
+        console.log(JSON.stringify(data));
         window.history.back();
         // FINAL_END
       }

@@ -31,14 +31,6 @@ define([
      */
 
     /*
-     * TODO (Bonus):
-     * Erstelle die 'validate' Funktion um das Genre-Control zu validieren (der
-     * gewählte Wert darf nicht der default-Wert sein). Die Funktion muss in ein
-     * Objekt eingeschlossen werden, welches dann von im 'validators' Attribut
-     * in der View referenziert wird.
-     */
-
-    /*
      * Die hier bereits vorhandenen 'shouldDisableAdd' und 'isValid' Funktionen
      * implementieren die Logik für das automatische Deaktivieren des
      * Submit-Buttons.
@@ -85,8 +77,9 @@ define([
       if (isValid(trackerObj)) {
         /*
          * TODO:
-         * Veröffentliche die gemachten Eingaben per knockout-postbox unter dem
-         * Key 'add-artist' und stoße die Navigation zurück zur Search View an.
+         * - Logge die gemachten Eingaben per console.log o.ä. (Beispiel für einen
+         * API-Call)
+         * - stoße die Navigation zurück zur vorherigen View an.
          */
       }
     };
