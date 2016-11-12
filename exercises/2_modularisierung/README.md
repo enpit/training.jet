@@ -18,28 +18,59 @@ Die Schulungsteilnehmer sollen nach Abschluss dieser Session in der Lage sein, d
 
 ## Aufgaben
 
-Als Vorbereitung sollte das Simple-Router-Beispiel aus dem Cookbook angeschaut werden: http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=router&demo=simple
+> Es ist zu empfehlen, als erstes die Anwendung zu starten und das Browserfenster während der Entwicklung offen zu lassen.
+> So kann während der Entwicklung stetig der eigene Fortschritt überprüft werden.
+> Hinweis: Die Dateien `header.js` und `header.html` müssen nicht angepasst werden.
 
-  1. In `main.js`:
-    - importiere die fehlenden Module
-    - konfiguriere den `ojRouter` für diese Anwendung
-    - erstelle ein ViewModel das den Router referenziert
-    - synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
-  2. Konfiguriere in `index.html` an der markierten Stelle ein Data-Binding, sodass das div-Element immer die View anzeigt die im Router gerade aktiv ist
-  3. In `search.js` und `search.html`:
-    - importiere auch hier die fehlenden Module und mache das 'spotify'-Modul im Body des Moduls bekannt
-    - In der `search.html`-View den Click-Handler wie folgt erweitern: 'selectArtist' Funktion des Parent-Moduls
-    - stoße in der `selectArtist`-Funktion die Navigation des Routers zur 'artist' View an
-  4. (Bonus) Für die Anzeige des bei der Suche ausgewählten Interpteten muss ein komplettes neues Modul aufgezogen werden:
-    - zeige in der View den Namen des Interpreten an (`artist.html`)
-    - definiere ein neues requirejs-Modul - hier sind viele der vorigen Schritte noch einmal wiederzufinden, z.B. Importieren von Modulen, Erstellung von ViewModels, Erstellung von Observables (`artist.js`)
-      - das 'artist' Observable muss außerdem mithilfe von knockout-postbox mit dem im search-Modul gewählten Wert synchronisiert werden
-    - in der View kannst du außerdem das Bild und/oder die Alben des interepreten anzeigen
-  5. Starte die Anwendung
-    - in NetBeans: Klick auf den grünen "Run" Button
-    - per Terminal: `grunt serve`
+### I. Router Konfiguration (`main.js`)
 
-Hinweis: Die Dateien `header.js` und `header.html` müssen nicht angepasst werden.
+Wenn die Anwendung gestartet wird, erscheint zunächst lediglich eine leere weiße Box; der bereits imlementierte Header kann nicht geladen werden da die Instanziierung des ViewModels in `main.js` noch fehlschlägt.
+Zunächst muss also in `src/js/main.js` das ViewModel korrekt erstellt werden und außerdem die bereits existierende statische `ojRouter` Instanz für unsere Zwecke konfiguriert werden.
+Als Vorbereitung sollte das [Simple-Router-Beispiel](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=router&demo=simple) aus dem Cookbook angeschaut werden.
+Die auszuführenden Schritte sind dann wie folgt:
+
+  1. Importiere das fehlende `ojs/ojrouter` Modul
+  2. Konfiguriere den `ojRouter` für diese Anwendung
+  3. Erstelle ein ViewModel das den Router referenziert
+  4. Synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
+
+Zwischenergebnis: Die Instanziierung des ViewModels ist erfolgreich, sodass der Header korrekt geladen werden kann (das enpit-Logo und der Schriftzug "JET Spotify Explorer" erscheinen).
+
+### II. Anzeigen der aktuellen View-Komponente
+
+Es wird weiterhin lediglich eine leere weiße Box angezeigt, da in `src/index.html` der aktuelle Status des Routers für die Anzeige der entsprechenden View benötigt wird.
+
+  1. Konfiguriere in `index.html` ein Data-Binding zur aktuellen ID des Routers
+
+Zwischenergebnis: Das div-Element in der `index.html` zeigt die View an, die im Router gerade aktiv ist.
+In unserem Fall ist das die Suchansicht.
+
+### III. Implementierung der Suche
+
+Die Suche funktioniert allerdings noch nicht.
+Hierfür müssen in `src/js/viewModels/search.js` und `src/js/view/search.html` einige Anpassungen vorgenommen werden: 
+
+  1. Importiere die fehlenden Module (`search.js`)
+  2. Mache das `spotify`-Modul im Body des `search`-Moduls bekannt (`search.js`)
+  3. Erweitere den Click-Handler, sodass die `selectArtist`-Funktion des ViewModels aufgerufen wird (`search.html`)
+  4. Stoße in der `selectArtist`-Funktion die Navigation des Routers zur `artist` View an (`search.js`)
+
+Zwischenergebnis: Die Suche funktioniert, es kann nach Interpreten gesucht werden, deren Namen dann in einer Liste angezeigt und als Buttons gerendert werden.
+Ein Klick auf einen der Buttons navigiert den Benutzer zur `artist` View, die allerdings noch leer ist.
+
+### IV. (Bonus) Erstellung des `artist` Moduls
+
+> Dies ist eine Bonus-Aufgabe für Teilnehmer, die vor Ablauf der Zeit bereits mit den vorigen Aufgaben fertig geworden sind oder nach der Schulung ihre Kenntnisse noch vertiefen wollen.
+
+Für die Anzeige des bei der Suche ausgewählten Interpteten muss ein komplettes neues Modul aufgezogen werden:
+
+  1. Zeige den Namen des Interpreten an (`artist.html`)
+  2. Definiere ein neues requirejs-Modul, das das ViewModel für die `artist`-View bereitstellt (`artist.js`)
+    - hier sind viele der vorigen Schritte noch einmal wiederzufinden, z.B. Importieren von Modulen, Erstellung von ViewModels, Erstellung von Observables
+  3. Das `artist` Observable muss mithilfe von knockout-postbox mit dem im search-Modul gewählten Wert synchronisiert werden (`artist.js`)
+  4. Du kannst zusätzlich das Bild des interepreten anzeigen (`artist.html`)
+
+Zwischenergebnis: Der Name und das Bild des zuvor ausgewählten Interpreten werden in der `artist`-View angezeigt.
 
 ## Referenzen:
 

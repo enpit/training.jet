@@ -51,7 +51,7 @@ require(['ojs/ojcore',
          'ojs/ojtoolbar',
          'ojs/ojbutton',
          // WORKSHOP_START
-         // TODO: Importiere hier das 'ojs/ojrouter' Modul
+         // TODO 1.1: Importiere das fehlende 'ojs/ojrouter' Modul
          // WORKSHOP_END
          // FINAL_START
          'ojs/ojrouter',
@@ -59,25 +59,25 @@ require(['ojs/ojcore',
          'ojs/ojmodule'],
 function (oj, ko, $) {
   // WORKSHOP_START
-  // TODO:
+  // TODO 1.2: Konfiguriere den `ojRouter` für diese Anwendung
   // WORKSHOP_END
-  // Speichere die Root-Instanz des oj-router in einer lokalen Variable
+  //  - speichere die Root-Instanz des oj-router in einer lokalen Variable
   // FINAL_START
   var router = oj.Router.rootInstance;
   // FINAL_END
-  // Konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
-  //                                        und 'artist' (Label: Interpret) bekannt werden.
-  // Es sind keine weiteren Attribute wie z.B. Value erforderlich.
+  //  - konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
+  //    und 'artist' (Label: Interpret) bekannt werden.
+  //  - es sind keine weiteren Attribute wie z.B. Value erforderlich.
   // FINAL_START
   router.configure({
     'search': {label: 'Suche', isDefault: true},
     'artist': {label: 'Interpret'}
   });
   // WORKSHOP_START
-  // TODO:
+  // TODO 1.3: Erstelle ein ViewModel das den Router referenziert
   // WORKSHOP_END
   // FINAL_END
-  // Erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
+  //  - erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
   // FINAL_START
   var viewModel = {
     router: router
@@ -86,10 +86,10 @@ function (oj, ko, $) {
 
   $(document).ready(function () {
     // WORKSHOP_START
-    // TODO:
+    // TODO 1.4: Synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
     // WORKSHOP_END
-    // Rufe ko.applyBindings erst auf sobald der Router sich synchronisiert hat 
-    // (siehe  ggf nochmals in cookbook Simple Router Beispiel)
+    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers 
+    //    (siehe ggf. nochmals im Cookbook, Simple Router Beispiel)
     // WORKSHOP_START
     ko.applyBindings(viewModel, document.getElementById('page'));
     // WORKSHOP_END
