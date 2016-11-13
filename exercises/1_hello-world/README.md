@@ -25,6 +25,8 @@ Hinweise:
 > Zu erledigende Aufgaben sind mit *TODO X* Kommentaren gekennzeichnet (X = Nummer der Aufgabe in dieser Readme-Datei).
 
 > Es ist zu empfehlen, als erstes die Anwendung zu starten (`Run` Kommando in NetBeans / `grunt serve` im Terminal) und das Browserfenster während der Entwicklung offen zu lassen.
+> Außerdem ist es ratsam, ein Auge auf etwaige Fehler bei der Ausführung der Webseite zu haben.
+> NetBeans hat hierfür ein eingebautes Log-Fenster in der IDE; bei Verwendung eines anderen Editors können die Developer-Tools dafür verwendet werden.
 
 > Der Code ist desweiteren mit sowohl englischen als auch deutschen Kommentaren versehen.
 > Englische Kommentare sind offiziellen Codebeispielen oder Templates von Oracle entnommen, oder entstammen dem Spotify-Explorer Projekt.
