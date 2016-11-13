@@ -7,10 +7,22 @@
         <h1 data-bind="text: name"></h1>
     </div>
     <!--
-     TODO:
-      Erstelle ein Balkendiagramm das die Alben des zuvor vom Anwender
-      ausgewählten Interpreten anzeigt. Bei Klick auf einen der Balken soll das
-      'selectedAlbums' Array mit dem ausgewählten Album aktualisiert werden,
-      sodass die Navigation zur 'album' View ausgeführt werden kann.
+     TODO 2.3: Erstelle das Balkendiagramm
+        - erstelle ein div-Element
+        - per `data-bind` muss das div-Element als eine `ojComponent` beschrieben werden:
+            - es handelt sich bei dieser Komponente (`component`) um ein `ojChart`
+            - der `type` ist `bar`
+            - `series` erwartet die Datenquelle für das Diagramm
+                - hier muss das im ViewModel erstellte Observable-Array referenziert werden
+            - `groups` beschreibt in einem String-Array die verschiedenen Gruppen von Datensätzen
+                - in unserem Fall wird nur eine Gruppe angezeigt, nämlich die Popularität
+            - der `selectionMode` gibt an wieviele Elemente ausgewählt werden können (hier: `single`)
+            - das `selection` Attribut erwartet eine Referenz auf ein Observable-Array, dessen
+              Inhalt dann mit der aktuellen Selektion synchronisiert wird
+                - hier muss das in Schritt 2.4 noch zu erstellende `selectedAlbums`
+                  Observable-Array referenziert werden
+        - im `style`-Attribut des div-Elements kann zudem die Größe des Diagramms festgelegt werden
+          - Beispielwerte: Breite 100% aber maximal 500px, Höhe 350px
+          - kann natürlich auch in `css/override.css` definiert werden
       -->
 </div>

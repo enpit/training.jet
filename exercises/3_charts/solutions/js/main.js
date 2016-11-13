@@ -20,7 +20,7 @@ requirejs.config(
     paths:
     //injector:mainReleasePaths
     {
-      'knockout': 'libs/knockout/knockout-3.4.1.debug',
+      'knockout': 'libs/knockout/knockout.debug',
       'jquery': 'libs/jquery/jquery-3.1.0',
       'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
       'promise': 'libs/es6-promise/es6-promise',
@@ -58,12 +58,6 @@ function (oj, ko, $) {
     'artist': {label: 'Interpret'},
     'album': {label: 'Album'},
     'add-artist': {label: 'Add Artist'}
-  });
-
-  ko.postbox.subscribe('add-artist', function onAddArtist (newArtist) {
-    // normally, you would save the artist to a database (e.g. via REST call)
-    // for now, just print the artist to the user
-    alert(JSON.stringify(newArtist));
   });
 
   var viewModel = {

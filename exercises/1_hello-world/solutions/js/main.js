@@ -16,7 +16,7 @@ requirejs.config(
   paths:
   //injector:mainReleasePaths
   {
-    'knockout': 'libs/knockout/knockout-3.4.0.debug',
+    'knockout': 'libs/knockout/knockout.debug',
     'jquery': 'libs/jquery/jquery-3.1.0',
     'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
     'promise': 'libs/es6-promise/es6-promise',
@@ -48,7 +48,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
         var self = this;
 
         /*
-         * Erstelle ein Knockout Observable mit dem Namen 'vorname' und
+         * - erstelle ein Knockout Observable mit dem Namen 'vorname' und
          * setze ihn z.B. auf 'DOAG2016'
          */
         self.vorname = ko.observable('DOAG2016');

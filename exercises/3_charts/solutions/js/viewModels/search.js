@@ -5,7 +5,7 @@ define([
   'ojs/ojcore',
   'knockout',
   'jquery',
-  '../spotify',
+  'spotify',
   'knockout-postbox',
   'ojs/ojselectcombobox',
   'ojs/ojarraytabledatasource',
@@ -20,8 +20,11 @@ define([
     self.query = ko.observable('');
     self.artists = ko.observableArray([]).syncWith('searchResults', true);
     /*
-     * Erstelle das dataSource Observable, welches sich mit dem 'artists'
-     * Observable-Array synchronisiert.
+     *  - Instanziiere eine ArrayTableDataSource und binde sie an `self.dataSource`
+     *  - Der aufzurufende ArrayTableDataSource Konstruktor erwartet als Argument die
+     *    Datenquelle (das `artists` Observable-Array) und ein Options-Objekt, welches
+     *    in diesem Fall angeben muss welches Attribut als ID der einzelnen Elemente
+     *    verwendet werden soll (s. Cookbook Beispiel)
      */
     self.dataSource = new oj.ArrayTableDataSource(
       self.artists, {idAttribute: "id"});
@@ -37,8 +40,6 @@ define([
         function onFulfilled (response) {
           // filter artists
           response.artists.items.forEach(function (artist, index) {
-            artist.thumbnail = artist.images.pop();
-            artist.cover = artist.images[0] || artist.thumbnail;
             artist.index = index;
             self.artists.push(artist);
           });

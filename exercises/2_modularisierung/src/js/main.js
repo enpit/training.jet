@@ -16,7 +16,7 @@ requirejs.config(
     paths:
     //injector:mainReleasePaths
     {
-      'knockout': 'libs/knockout/knockout-3.4.0.debug',
+      'knockout': 'libs/knockout/knockout.debug',
       'jquery': 'libs/jquery/jquery-3.1.0',
       'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
       'promise': 'libs/es6-promise/es6-promise',
@@ -50,20 +50,20 @@ require(['ojs/ojcore',
          'ojs/ojknockout',
          'ojs/ojtoolbar',
          'ojs/ojbutton',
-         // TODO: Importiere hier das 'ojs/ojrouter' Modul
+         // TODO 1.1: Importiere das fehlende 'ojs/ojrouter' Modul
          'ojs/ojmodule'],
 function (oj, ko, $) {
-  // TODO:
-  // Speichere die Root-Instanz des oj-router in einer lokalen Variable
-  // Konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
-  //                                        und 'artist' (Label: Interpret) bekannt werden.
-  // Es sind keine weiteren Attribute wie z.B. Value erforderlich.
-  // Erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
+  // TODO 1.2: Konfiguriere den `ojRouter` für diese Anwendung
+  //  - speichere die Root-Instanz des oj-router in einer lokalen Variable
+  //  - konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
+  //    und 'artist' (Label: Interpret) bekannt werden.
+  //  - es sind keine weiteren Attribute wie z.B. Value erforderlich.
+  //  - erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
 
   $(document).ready(function () {
-    // TODO:
-    // Rufe ko.applyBindings erst auf sobald der Router sich synchronisiert hat 
-    // (siehe  ggf nochmals in cookbook Simple Router Beispiel)
+    // TODO 1.4: Synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
+    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers 
+    //    (siehe ggf. nochmals im Cookbook, Simple Router Beispiel)
     ko.applyBindings(viewModel, document.getElementById('page'));
   });
 });

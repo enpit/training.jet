@@ -26,10 +26,10 @@
                 <div class="oj-flex-item artist-name">
                     <div>
                         <!--
-                          TODO:
-                          Rufe im click-Handler die 'selectArtist' Funktion des Parent-Moduls auf.
-                          Entferne hierfür den 'alert' Aufruf und referenziere stattdessen mithilfe
-                          von $parent die entsprechende Funktion des SearchViewModels.
+                          TODO 3.3: Erweitere den Click-Handler, sodass die `selectArtist`-Funktion des ViewModels aufgerufen wird
+                            - entferne den 'alert' Aufruf und referenziere stattdessen mithilfe
+                              von $parent die entsprechende Funktion des SearchViewModels
+                            - das ist nötig da in einem `script`-Template ein separater Knockout-Kontext erstellt wird
                         -->
                         <button data-bind=" attr: { id: index },
                                             click: alert('clicked'),

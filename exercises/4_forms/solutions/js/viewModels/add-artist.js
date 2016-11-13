@@ -19,16 +19,18 @@ define([
     var self = this;
 
     /*
-     * Erstelle die benötigten Observables um die Daten aus dem Formular zu
-     * speichern. Für das Genre wird ein Observable-Array benötigt.
+     * - 'name' observable
+     * - 'genre' observableArray
+     * - 'year' observable
+     * - wenn gewünscht kannst du den Observables Default-Werte zuweisen: `ko.observable('Default-Value')`
+     * - 
      */
     self.name = ko.observable('');
-    self.genre = ko.observableArray(['default']);
+    self.genre = ko.observableArray([]);
     self.year = ko.observable(new Date().getFullYear());
 
     /*
-     * Erstelle ein einfaches 'tracker' Observable um den Status der Validierung
-     * zu speichern.
+     * - erstelle ein einfaches 'tracker' Observable ohne Default-Wert
      */
     self.tracker = ko.observable();
 
@@ -78,9 +80,8 @@ define([
       var trackerObj = ko.utils.unwrapObservable(self.tracker);
       if (isValid(trackerObj)) {
         /*
-         * - Logge die gemachten Eingaben per console.log o.ä. (Beispiel für einen
-         * API-Call)
-         * - stoße die Navigation zurück zur vorherigen View an.
+         * - Logge die gemachten Eingaben per console.log o.ä. (Beispiel für einen API-Call)
+         * - stoße die Navigation zurück zur vorherigen View an
          */
         var data = {
           name: self.name(),

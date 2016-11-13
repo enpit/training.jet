@@ -16,7 +16,7 @@ requirejs.config(
     paths:
     //injector:mainReleasePaths
     {
-      'knockout': 'libs/knockout/knockout-3.4.0.debug',
+      'knockout': 'libs/knockout/knockout.debug',
       'jquery': 'libs/jquery/jquery-3.1.0',
       'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
       'promise': 'libs/es6-promise/es6-promise',
@@ -53,23 +53,23 @@ require(['ojs/ojcore',
          'ojs/ojrouter',
          'ojs/ojmodule'],
 function (oj, ko, $) {
-  // Speichere die Root-Instanz des oj-router in einer lokalen Variable
+  //  - speichere die Root-Instanz des oj-router in einer lokalen Variable
   var router = oj.Router.rootInstance;
-  // Konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
-  //                                        und 'artist' (Label: Interpret) bekannt werden.
-  // Es sind keine weiteren Attribute wie z.B. Value erforderlich.
+  //  - konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
+  //    und 'artist' (Label: Interpret) bekannt werden.
+  //  - es sind keine weiteren Attribute wie z.B. Value erforderlich.
   router.configure({
     'search': {label: 'Suche', isDefault: true},
     'artist': {label: 'Interpret'}
   });
-  // Erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
+  //  - erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
   var viewModel = {
     router: router
   };
 
   $(document).ready(function () {
-    // Rufe ko.applyBindings erst auf sobald der Router sich synchronisiert hat 
-    // (siehe  ggf nochmals in cookbook Simple Router Beispiel)
+    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers 
+    //    (siehe ggf. nochmals im Cookbook, Simple Router Beispiel)
     oj.Router.sync();
     ko.applyBindings(viewModel, document.getElementById('page'));    
   });

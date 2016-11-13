@@ -5,11 +5,16 @@ define([
   'ojs/ojcore',
   'knockout',
   'jquery',
+  /*
+   * importiere das 'spotify' Modul
+   * importiere das 'knockout-postbox' Modul
+   */
   'spotify',
   'knockout-postbox',
   'ojs/ojarraytabledatasource',
   'ojs/ojselectcombobox',
   'ojs/ojlistview'
+/*
 ], function (oj, ko, $, spotify) {
   /**
    * The view model for the search module
@@ -51,7 +56,8 @@ define([
       index = Number(event.currentTarget.id);
       artist = self.artists()[index];
       self.selectedArtist(artist);
-      // Rufe hier die Navigation zur 'artist' view auf
+      // - referenziere hierfür zunächst die Root-Instanz des Routers
+      // - rufe dann mithilfe der `go`-Funktion die Navigation zur 'artist' View auf
       oj.Router.rootInstance.go('artist');
     };
   }

@@ -4,12 +4,14 @@
         <div class="oj-flex">
             <div class="oj-flex-item">
                 <!--
-                  Teil 1: Erstelle ein input-Element und ein zugehöriges Label
-                    für den Namen des Interpreten, der Wert soll mit dem 'name'
-                    Observable synchronisiert werden.
-                  Teil 2: Füge Validierung für das input-Element hinzu
-                    - leere Werte sind nicht erlaubt
-                    - das 'tracker' Observable speichert den Status der Validierung
+                    - erstelle ein input-Element und ein zugehöriges Label für den Namen
+                      des Interpreten, nach Vorlage aus dem Cookbook
+                    - der Wert soll mit dem 'name' Observable synchronisiert werden
+                    - leere Werte sind nicht erlaubt, setze also das `required` Attribut
+                      der Komponente auf `true`                        
+                    - das 'tracker' Observable soll den Status der Validierung speichern,
+                      zu setzen über das `invalidComponentTracker` Attribut
+                    - der in JET eingebaute Required-Validator übernimmt die eigentliche Logik 
                   -->
                 <label for="nameControl">Name:</label>
                 <input id="nameControl"
@@ -27,23 +29,27 @@
         <div class="oj-flex">
             <div class="oj-flex-item">
                 <!--
-                  Teil 1: Erstelle ein select-Element und ein zugehöriges Label
-                    für das Genre des Interpreten, der Wert soll mit dem 'genre'
-                    Observable synchronisiert werden. Definiere mindestens drei
-                    Genres aus denen der User wählen kann.
-                  Teil 2 (Bonus): Füge Validierung für das select-Element hinzu
+                    - erstelle ein select-Element und ein zugehöriges Label für das Genre
+                      des Interpreten, nach Vorlage aus dem Cookbook
+                    - der Wert soll mit dem 'genre' Observable synchronisiert werden
+                    - definiere mindestens drei frei wählbare Genres aus denen der User wählen kann                    
                     - füge zunächst eine default-Option hinzu, die mit "Bitte
-                      wählen" beschrieben ist (value muss 'default' lauten damit
-                      die bereits implementierte Validierung hinterher funktioniert)
-                    - referenziere den custom validator, der im ViewModel
-                      definiert ist
+                      wählen" beschrieben ist
+                      - setze das `selected` Attribut dieses option-Elements auf `true`
+                      - value muss 'default' lauten damit die bereits implementierte Validierung hinterher funktioniert
+                    - auch hier ist eine Eingabe des Users erforderlich , setze also das `required` Attribut
+                      der Komponente auf `true` (rendert autom. einen blauen Stern im Label)
+                    - es gibt keinen in JET eingebauten Validator für select-Elemente, daher erfolgt
+                      die Validierung dieses Elements manuell
+                        - Referenz auf das `invalidComponentTracker` Observable also nicht nötig
+                        - die manuelle Validierung ist bereits implementiert und kann bei Bedarf im
+                          ViewModel in der `shouldDisableAdd` Funktion nachgelesen werden
                 -->
                 <label for="genreControl">Genre:</label>
                 <select id="genreControl" data-bind="ojComponent: {
                     component: 'ojSelect',
                     required: true,
-                    value: genre,
-                    validator: [noDefault]
+                    value: genre
                 }">
                 <option value="default">Bitte wählen</option>
                 <option value="rock">Rock</option>
@@ -53,15 +59,16 @@
             </div>
             <div class="oj-flex-item">
                 <!--
-                  Teil 1: Erstelle ein input-Element und ein zugehöriges Label
-                    für das Gründungsjahr des Interpreten, der Wert - dieses mal
-                    eine Zahl und nicht nur Text - soll mit dem 'year' Observable
-                    synchronisiert werden.
-                  Teil 2: Füge Validierung für das input-Element hinzu
-                    - leere Werte sind nicht erlaubt
-                    - eine Ober- und Untergrenze verhindert unrealistische Eingaben
-                    - das 'tracker' Observable speichert den Status der Validierung
-                  Teil 3 (Bonus): Füge einen Converter hinzu, der Nachkommastellen rundet.
+                    - erstelle ein input-Element und ein zugehöriges Label für das Gründungsjahr
+                      des Interpreten, nach Vorlage aus dem Cookbook
+                      - d.h. es sind nur Zahlen als Eingabe erlaubt
+                  - der Wert soll mit dem 'year' Observable synchronisiert werden.
+                    - eine Leereingabe ist erlaubt (`required` also nicht setzen)
+                    - es gibt allerdings einige Regeln für den Fall dass eine Eingabe gemacht wird:
+                        - die `min` und `max` Werte sollten auf 1000 bzw. 2016 gesetzt werden, damit
+                          der in JET eingebaute Validator unrealistische Werte abfangen kann                      
+                    - das 'tracker' Observable soll den Status der Validierung speichern,
+                      zu setzen über das `invalidComponentTracker` Attribut
                 -->
                 <label for="yearControl">Gründungsjahr:</label>
                 <input id="yearControl" data-bind="ojComponent: {
@@ -86,11 +93,15 @@
         <div class="oj-flex">
             <div class="oj-flex-item">
                 <!--
-                  Teil 1: Füge einen Button hinzu, der bei Klick die 'save'
-                    Funktion des ViewModels aufruft. Für das Alta-UI Design
-                    müssen bestimmte CSS Klassen gesetzt werden.
-                  Teil 2: Referenziere die 'shouldDisableAdd' Funktion damit der
-                    Button nicht klickbar ist wenn Fehler im Formular auftreten.
+                  - erstelle ein button-Element, nach Vorlage aus dem Cookbook
+                  - bei Klick die auf den Button soll die 'save' Funktion des ViewModels 
+                    ausgeführt werden
+                  - für das Alta-UI Design kann die `oj-button` CSS-Klasse gesetzt werden
+                    - nach Belieben auch `oj-button-confirm`
+                    - die benötigte Logik ist im ViewModel bereits implementiert
+                    - rufe im `disabled` Attribut die 'shouldDisableAdd' Funktion auf damit der Button nicht klickbar
+                      ist wenn Fehler im Formular auftreten
+                      - Wichtig: Hier ist tatsächlich ein *Aufruf* der Funktion und nicht bloß eine Referenz darauf nötig
                 -->
                 <button id="add-artist-button" class="oj-button oj-button-confirm" data-bind="click: save, ojComponent: {
                     component: 'ojButton',

@@ -5,11 +5,23 @@ define([
   'ojs/ojcore',
   'knockout',
   'jquery',
-  // TODO: Importiere hier die Module spotify und knockout-postbox ...
+  /*
+   * TODO 3.1: Importiere die fehlenden Module 
+   * importiere das 'spotify' Modul
+   * importiere das 'knockout-postbox' Modul
+   */
   'ojs/ojarraytabledatasource',
   'ojs/ojselectcombobox',
   'ojs/ojlistview'
-// ... und mache das spotify Modul in der Funktion bekannt (knockout-postbox wird autom. an 'ko' gebunden)
+/*
+ * TODO 3.2: Mache das `spotify`-Modul im Body des `search`-Moduls bekannt
+ * - hierfür muss ein weiterer Parameter in die untenstehende Funktionsdeklaration
+ *   eingefügt werden
+ *    - beachte die richtige Reihenfolge der Parameter!
+ *    - da im Code bereits Referenzen auf das `spotify`-Modul existieren,
+ *      sollte der Parameter 'spotify' lauten  
+ * - knockout-postbox wird automatisch an 'ko' gebunden
+ */
 ], function (oj, ko, $) {
   /**
    * The view model for the search module
@@ -51,8 +63,9 @@ define([
       index = Number(event.currentTarget.id);
       artist = self.artists()[index];
       self.selectedArtist(artist);
-      // TODO:
-      // Rufe hier die Navigation zur 'artist' view auf
+      // TODO 3.4: Stoße in der `selectArtist`-Funktion die Navigation des Routers zur 'artist' View an
+      // - referenziere hierfür zunächst die Root-Instanz des Routers
+      // - rufe dann mithilfe der `go`-Funktion die Navigation zur 'artist' View auf
     };
   }
   return SearchViewModel;

@@ -45,8 +45,13 @@
     <h1>Hands-On #1</h1>
     <p>...</p>
     <label for="text-input">Vorname</label>
-    <input id="text-input" type="text" data-bind="ojComponent: {component: 'ojInputText',
-                              value: vorname}" />
+    <input id="text-input"
+        type="text"
+        data-bind="ojComponent: {
+            component: 'ojInputText', 
+            value: vorname
+        }"
+    />
     <br/><br/>
     <span class="oj-label">Hallo </span>
     <span data-bind="text: vorname"></span>
