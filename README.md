@@ -10,7 +10,7 @@ Die Hands-On Sessions orientieren sich an unserer Beispielanwendung [Spotify-Exp
 - Notebook mit MacOS, Windows oder Linux
 - WLAN
 - 8GB Arbeitsspeicher oder höher
-- Ausreichend freien Festplattenplatz
+- Ausreichend freien Festplattenplatz (Schulungsunterlagen inkl. aller node.js Module etc. brauchen ca. 1,1 GB)
 
 ## Vorbereitung vor dem Workshop
 
