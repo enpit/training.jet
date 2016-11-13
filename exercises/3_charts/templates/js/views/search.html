@@ -48,15 +48,14 @@
     -->
     <script type="text/html" id="artist-template">
         // FINAL_START
-        <li data-bind="attr: {id: id}">
+        <li>
             <div class="oj-flex" style="flex-wrap: nowrap">
                 <div class="thumbnail-container" data-bind="if: images.length > 0">
                     <div role="img" class="artist-image thumbnail" data-bind="style: { backgroundImage: 'url(\'' + thumbnail.url + '\')' }"></div>
                 </div>
                 <div class="oj-flex-item artist-name">
                     <div>
-                        <button data-bind=" attr: { id: index },
-                                            click: $parent.selectArtist,
+                        <button data-bind="click: $parent.selectArtist,
                                             ojComponent: {
                                                 component: 'ojButton',
                                                 label: name
