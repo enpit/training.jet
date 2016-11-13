@@ -20,32 +20,48 @@ In einer Bonusaufgabe können außerdem weitere Visualisierungsmöglichkeiten au
 
 ## Aufgaben
 
+> Es ist zu empfehlen, als erstes die Anwendung zu starten (`Run` Kommando in NetBeans / `grunt serve` im Terminal) und das Browserfenster während der Entwicklung offen zu lassen.
+
+Für diese Übung wurden einige Zeilen Code, die mit der Darstellung der Liste der Suchergebnisse zusammenhängen, aus dem Such-Modul entfernt.
+Als Resultat erscheint beim Starten der Anwendung zunächst wieder eine leere weiße Box, auch der Header wird nicht mehr angezeigt.
+
 ### I. Darstellung der Suchergebnisse
 
-Stelle die Suchergebnisse in einer [ListView](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=listView&demo=observableArrayListView) dar.
+Stelle die Suchergebnisse in einer ListView dar.
 
- 1. importiere die nötigen Module (`search.js`)
- 2. erstelle die benötigte Datenquelle als Observable-Array im ViewModel (`search.js`)    
- 3. erstelle eine ojListView Komponente (`search.html`)
- 4. erstelle das Template für die Listenelemente (dies sollte zumindest einen Button mit dem Namen des Interpreten rendern) (`search.html`)
- 5. per Klick auf den Button soll zur 'artist' View navigiert werden (`search.html`)
+  1. Importiere die nötigen Module (`search.js`)
+  2. Erstelle die benötigte Datenquelle als [ArrayTableDataSource](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=listView&demo=observableArrayListView) (`search.js`)    
+  3. Erstelle eine ojListView Komponente (`search.html`)
+    - Insbesondere hier ist es zu empfehlen, das `ul`-Element aus dem [Cookbook-Beispiel](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=listView&demo=arrayListView) heraus zu kopieren und dann für unsere Zwecke anzupassen
+  4. Erstelle das Template für die Listenelemente (`search.html`)
+    - Referenz: [Button-Beispiel im Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=pushButtons&demo=pushButton)
 
-Ergebnis: Der Anwender kann die Suchergebnisse ansehen, ein Klick auf den Button eines Interpreten löst die Navigation zur *artist* View an; die *artist* View ansich ist noch leer.
+Zwischenergebnis: Die Suche ist wieder funktional; ein Klick auf den Button eines Interpreten löst die Navigation zur *artist* View aus.
+Die `artist`-View ansich ist noch leer.
 
-  2. Visualisiere die Alben des gewählten Interpreten:
-    - erstelle die benötigte Datenquelle als Observable-Array im ViewModel (`artist.js`)
-    - füge die von der Spotify Web API zurückgegebenen Album-Details zur Datenquelle hinzu (`artist.js`) (Datenstruktur TODO)
-    - erstelle das [Balkendiagramm](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default) (`artist.html`), das die zuvor erstellten Daten zu visualisiert
-    - um die Klicks des Users auf die Balken im Diagramm zu tracken, erstelle ein weiteres Observable-Array (`artist.js`)
-      - dieses Array sollte zusätzlich per knockout-postbox synchronisiert werden um später in der 'album' View auf das ausgewählte Album zugreifen zu können
-      - es gibt keinen Klick-Handler im klassischen Sinn für Diagramme (da auch Multi-Selektion möglich ist); die gewünschte Funktionalität kann und sollte per knockout-postbox realisiert werden        
-  3. **Bonus**: Wähle eine weitere Visualisierungsmöglichkeit und setze diese in der 'album' View um (`album.html`, ggf. `album.js`)
-    - hierfür kannst du zunächst im Cookbook nach möglichen Diagrammen suchen
-  4. Starte die Anwendung
-    - in NetBeans: Klick auf den grünen "Run" Button
-    - per Terminal: `grunt serve`
+### II. Visualisierung der Alben des Interpreten
 
-Tipp: Es bietet sich oft an, die Aufgaben in kleinere Zwischenschritte aufzuteilen und die Ergebnisse zu debuggen oder zumindest mittels `alert` oder `console.log` auszugeben - so lässt sich das Verhalten der Anwendung besser nachvollziehen.
+Die Alben des Interpreten sollen in einem Balkendiagramm visualisiert werden.
+Das zu implementierende Diagramm ist eine modifizierte und vereinfachte Version des entsprechenden [Cookbook-Beispiels](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default). 
+
+  1. Erstelle die benötigte Datenquelle als Observable-Array (`artist.js`)
+  2. Füge die von der Spotify Web API zurückgegebenen Album-Details zur Datenquelle hinzu (`artist.js`)
+  3. Erstelle das [Balkendiagramm](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default) (`artist.html`)
+  4. Um die Klicks des Users auf die Balken im Diagramm zu tracken, erstelle ein weiteres Observable-Array (`artist.js`)
+    - s. Dokumentation von [Knockout](http://knockoutjs.com/documentation/observables.html) und [knockout-postbox Dokumentation](https://github.com/rniemeyer/knockout-postbox)
+
+Zwischenergebnis: Ein Balkendiagramm zeigt die Alben des gewählten Interpreten sowie deren relative Popularität an.
+Bei Klick auf einen der Balken wird die Navigation zur 'album'-View ausgelöst (welche Bild und Name des Albums anzeigt).
+
+### III. Bonus: Visualisierung der Tracks eines Albums 
+
+Wähle eine weitere Visualisierungsmöglichkeit und setze diese in der 'album'-View um.
+
+Hierfür kannst du zunächst im [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html) nach möglichen Diagrammen suchen, anschließend kann das Diagramm im markierten Abschnitt in `album.html` umgesetzt werden.
+Außerdem kann die [Spotify Web API](https://developer.spotify.com/web-api/console/get-album/#complete) nach weiteren Attributen eines Albums durchsucht werden (Klick auf 'Fill sample data', dann 'Try it').
+
+Das ViewModel existiert bereits.
+Falls ein anderes Attribut als die Track-Dauer visualisiert werden soll, muss allerdings der in `album.js` markierte Abschnitt angepasst werden.
 
 ## Referenzen:
 

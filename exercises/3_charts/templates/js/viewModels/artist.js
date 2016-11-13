@@ -22,9 +22,10 @@ define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
 
       /*
       // WORKSHOP_START
-       * TODO:
+       * TODO 2.1: Erstelle die benötigte Datenquelle als Observable-Array
       // WORKSHOP_END
-       * Erstelle das 'albums' Observable-Array
+       * - erstelle ein leeres Observable-Array, das an das `albums`-Attribut
+       *   dieses ViewModels gebunden ist
        */
       // FINAL_START
       self.albums = ko.observableArray([]);
@@ -41,10 +42,18 @@ define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
             if (isMostPopularAlbum(album)) {
               /*
               // WORKSHOP_START
-               * TODO:
+               * TODO 2.2: Füge die von der Spotify Web API zurückgegebenen
+               *           Album-Details zur Datenquelle hinzu
               // WORKSHOP_END
-               * Füge die (relevanten) Daten des Albums als neues Objekt zum
-               * 'albums' Observable-Array hinzu.
+               * - erstelle ein neues Objekt, das die `id` und `name` Attribute
+               *   des `album` enthält
+               * - damit die Daten in einem Diagramm angezeigt werden können, wird
+               *   außerdem ein `items` Attribut benötigt
+               *   - `items` muss ein Array sein, das einen oder mehrere zu
+               *     visualisierende Werte erwartet
+               *   - in unserem Fall wird nur ein Datum benötigt, nämlich 
+               *     die `popularity` des `album` Objekts
+               * - füge das erstellte Objekt zum `albums` Array hinzu (z.B. per `push`)
                */
               // FINAL_START
               self.albums.push({
@@ -70,13 +79,14 @@ define(['ojs/ojcore', 'knockout', 'jquery', '../spotify', 'knockout-postbox',
 
       /*
       // WORKSHOP_START
-       * TODO:
+       * TODO 2.4: Um die Klicks des Users auf die Balken im Diagramm zu tracken, erstelle ein weiteres Observable-Array 
       // WORKSHOP_END
-       * - erstelle das 'selectedAlbums' Observable-Array
+       * - erstelle das `selectedAlbums` Observable-Array
        * - veröffentliche die Daten dieses Arrays per knockout-postbox unter dem Key 'selectedAlbums'
        * - wenn der User ein Element im Diagramm anklickt, soll ein Click-Handler
-       *    aufgerufen werden der die Navigation zur 'album' View ausführt
-       *    (Hinweis: Das ist mithilfe von Knockouts 'subscribe' Funktion lösbar)
+       *   aufgerufen werden der die Navigation zur 'album' View ausführt
+       *   - Hinweis: Es gibt keinen Klick-Handler im klassischen Sinn für Diagramme (da auch Multi-Selektion möglich ist)        
+       *   - die gewünschte Funktionalität ist mithilfe von Knockouts `subscribe` Funktion lösbar
        */
       // FINAL_START
       self.selectedAlbums = ko.observableArray([]).publishOn('selectedAlbums');

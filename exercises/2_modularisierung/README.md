@@ -18,7 +18,7 @@ Die Schulungsteilnehmer sollen nach Abschluss dieser Session in der Lage sein, d
 
 ## Aufgaben
 
-> Es ist zu empfehlen, als erstes die Anwendung zu starten und das Browserfenster während der Entwicklung offen zu lassen.
+> Es ist zu empfehlen, als erstes die Anwendung zu starten (`Run` Kommando in NetBeans / `grunt serve` im Terminal) und das Browserfenster während der Entwicklung offen zu lassen.
 > So kann während der Entwicklung stetig der eigene Fortschritt überprüft werden.
 > Hinweis: Die Dateien `header.js` und `header.html` müssen nicht angepasst werden.
 

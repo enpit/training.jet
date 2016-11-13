@@ -1,17 +1,3 @@
-// WORKSHOP_START
- <!--
-  TODO - Bonus:
-  Wenn noch Zeit übrig ist, kannst du hier die Daten des Albums visualisieren.
-  In der Lösung haben wir ein Kreisdiagramm erstellt welches die Dauer der Tracks
-  des Albums visualisiert, aber es ist bspw. auch eine Liste, ein Linien- oder
-  Pyramidendiagramm denkbar.
-  Die Daten werden im ViewModel bereits heruntergeladen und aufbereitet, je
-  nach Wunsch können dort noch Anpassungen vorgenommen werden (s. `album.js`).
-  Desweiteren könnten noch allgemeine Daten wie der Name des Albums und das
-  Albumcover angezeigt werden.
-  -->
-// WORKSHOP_END
-// FINAL_START
 <div id="album" data-bind="ifnot: album().loading">
   <!-- Hier werden zunächst das Albumcover und Details wie Albumname angezeigt -->
   <div data-bind="with: album">
@@ -24,7 +10,19 @@
         released <span data-bind="text: release"></span>
         (<span data-bind="text: label"></span>)
       </div>
-  </div>
+    </div>
+  // WORKSHOP_START
+  <!--
+    TODO - Bonus:
+    Wenn noch Zeit übrig ist, kannst du hier die Daten des Albums visualisieren.
+    In der Lösung haben wir ein Kreisdiagramm erstellt welches die Dauer der Tracks
+    des Albums visualisiert, aber es ist bspw. auch eine Liste, ein Linien- oder
+    Pyramidendiagramm denkbar.
+    Die Daten werden im ViewModel bereits heruntergeladen und aufbereitet, je
+    nach Wunsch können dort noch Anpassungen vorgenommen werden (s. `album.js`).
+    -->
+  // WORKSHOP_END
+  // FINAL_START
   <!-- Dieses Kreisdiagramm visualisiert die Anteile jedes Tracks an der Gesamt-Spieldauer des Albums -->
   <h2>Tracks:</h2>
   <div id="albumTracksChart" data-bind="ojComponent: {
@@ -38,5 +36,5 @@
         }"
         style="max-width:500px;width:100%;height:350px;">
     </div>
-</div>
 // FINAL_END
+</div>

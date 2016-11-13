@@ -19,8 +19,13 @@ Etwaige Probleme mit der Arbeitsumgebung können an dieser Stelle ebenfalls erka
 
 ## Aufgaben
 
-> **Hinweis**: Die zu bearbeitenden Dateien befinden sich im `src` Ordner.
+Hinweise:
+
+> Die zu bearbeitenden Dateien befinden sich im `src` Ordner.
 > Zu erledigende Aufgaben sind mit *TODO X* Kommentaren gekennzeichnet (X = Nummer der Aufgabe in dieser Readme-Datei).
+
+> Es ist zu empfehlen, als erstes die Anwendung zu starten (`Run` Kommando in NetBeans / `grunt serve` im Terminal) und das Browserfenster während der Entwicklung offen zu lassen.
+
 > Der Code ist desweiteren mit sowohl englischen als auch deutschen Kommentaren versehen.
 > Englische Kommentare sind offiziellen Codebeispielen oder Templates von Oracle entnommen, oder entstammen dem Spotify-Explorer Projekt.
 > Deutsche Kommentare sind eigens für die Schulung erstellt worden.

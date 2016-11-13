@@ -9,7 +9,9 @@ define([
   'knockout-postbox',
   'ojs/ojselectcombobox',
   // WORKSHOP_START
-  // TODO: Importiere die fehlenden JET Module für ListView und ArrayTableDataSource
+  // TODO 1.1: Importiere die nötigen Module
+  //  - ArrayTableDataSource
+  //  - ListView
   // WORKSHOP_END
   // FINAL_START
   'ojs/ojarraytabledatasource',
@@ -26,10 +28,13 @@ define([
     self.artists = ko.observableArray([]).syncWith('searchResults', true);
     /*
     // WORKSHOP_START
-     * TODO:
+     * TODO 1.2: Erstelle die benötigte Datenquelle als ArrayTableDataSource
     // WORKSHOP_END
-     * Erstelle das dataSource Observable, welches sich mit dem 'artists'
-     * Observable-Array synchronisiert.
+     *  - Instanziiere eine ArrayTableDataSource und binde sie an `self.dataSource`
+     *  - Der aufzurufende ArrayTableDataSource Konstruktor erwartet als Argument die
+     *    Datenquelle (das `artists` Observable-Array) und ein Options-Objekt, welches
+     *    in diesem Fall angeben muss welches Attribut als ID der einzelnen Elemente
+     *    verwendet werden soll (s. Cookbook Beispiel)
      */
     // FINAL_START
     self.dataSource = new oj.ArrayTableDataSource(
@@ -47,8 +52,6 @@ define([
         function onFulfilled (response) {
           // filter artists
           response.artists.items.forEach(function (artist, index) {
-            artist.thumbnail = artist.images.pop();
-            artist.cover = artist.images[0] || artist.thumbnail;
             artist.index = index;
             self.artists.push(artist);
           });

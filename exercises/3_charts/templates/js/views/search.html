@@ -10,16 +10,14 @@
             }" />
         <!--
         // WORKSHOP_START
-         TODO:
+         TODO 1.3: Erstelle eine ojListView Komponente
         // WORKSHOP_END
           Erstelle eine ojListView Komponente, die die Suchergebnisse anzeigt:
-            - die Daten sollen aus dem 'dataSource' Observable des ViewModels
+            - die Daten sollen aus dem `dataSource` Observable des ViewModels
               bezogen werden
-            - zu Testzwecken kann zuerst auch ein Array mit gemockten Daten
-              eingegeben werden
             - das template für die Listenelemente soll in einem separaten
               script-Tag definiert und in dieser Komponente lediglich
-              referenziert werden ('item' Attribut)
+              per ID referenziert werden
           -->
         // FINAL_START
         <ul id="listview" aria-label="Query results (list of artists)" data-bind="ojComponent: {
@@ -34,24 +32,28 @@
 
     <!--
     // WORKSHOP_START
-    TODO:
+    TODO 1.4: Erstelle das Template für die Listenelemente
     // WORKSHOP_END
       Erstelle in diesem Script-Tag das template für die ojListView Komponente:
         - da es sich bei jedem anzuzeigenden Suchergebnis um ein Listenelement
           handelt, muss der eigentliche anzuzeigende Inhalt von einem li-Tag
           umschlossen werden
         - jedes Listenelement soll einen Button rendern, der mit dem Namen
-          des jeweiligen Interpreten beschriftet ist und bei Klick die
-          'selectArtist' Funktion des SearchViewModels ausführt (vgl. Hands 2)        
+          des jeweiligen Interpreten beschriftet ist
+          - der Name des Interpreten kann per `name` referenziert werden
+        - bei Klick auf den Button soll die `selectArtist` Funktion des
+          SearchViewModels ausgeführt werden
+            - Reminder: Innerhalb des `<script>` Tags entsteht ein separater Knockout-Kontext 
         - Bonus: später kann auch noch ein Vorschau-Bild (Thumbnail) neben dem Namen
-          des Interpreten angezeigt werden. (thumbnail.url)
+          des Interpreten angezeigt werden
+            - das Bild kann per `images[0].url` referenziert werden
     -->
     <script type="text/html" id="artist-template">
         // FINAL_START
         <li>
             <div class="oj-flex" style="flex-wrap: nowrap">
                 <div class="thumbnail-container" data-bind="if: images.length > 0">
-                    <div role="img" class="artist-image thumbnail" data-bind="style: { backgroundImage: 'url(\'' + thumbnail.url + '\')' }"></div>
+                    <div role="img" class="artist-image thumbnail" data-bind="style: { backgroundImage: 'url(\'' + images[0].url + '\')' }"></div>
                 </div>
                 <div class="oj-flex-item artist-name">
                     <div>
