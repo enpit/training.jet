@@ -10,7 +10,7 @@ Die Hands-On Sessions orientieren sich an unserer Beispielanwendung [Spotify-Exp
 - Notebook mit MacOS, Windows oder Linux
 - WLAN
 - 8GB Arbeitsspeicher oder höher
-- Ausreichend freien Festplattenplatz
+- Ausreichend freien Festplattenplatz (Schulungsunterlagen inkl. aller node.js Module etc. brauchen ca. 1,1 GB)
 
 ## Vorbereitung vor dem Workshop
 
@@ -21,7 +21,13 @@ Die Hands-On Sessions orientieren sich an unserer Beispielanwendung [Spotify-Exp
 5. Als IDE empfehlen wir [NetBeans](https://netbeans.org/index.html) (HTML5/JavaScript Edition, Version 8.2) oder [Visual Studio Code](http://code.visualstudio.com/) 1.6.
 6. Dieses Repository herunterladen (ZIP-Datei per Webinterface herunterladen & entpacken, oder `git clone https://github.com/enpit/training.jet` ausführen)
  - es werden mit hoher Wahrscheinlichkeit noch einige kurzfristige Änderungen an diesem Repository vorgenommen werden; daher sollte dieser und der folgende Schritt kurz vor der Schulung (nochmals) durchgeführt werden
-7. Per Kommandozeile im Root-Verzeichnis dieses Projektes die benötigten Module installieren: `npm install`
+7. Per Kommandozeile **im jedem Ordner in `exercises`** die benötigten Module installieren:
+``` cmd
+$ cd exercises/1_hello-world/ && npm install
+$ cd ../2_modularisierung/ && npm install
+$ cd ../3_charts/ && npm install
+$ cd ../4_forms/ && npm install
+```
 
 ## Installation überprüfen
 
