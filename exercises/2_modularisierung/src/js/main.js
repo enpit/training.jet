@@ -58,11 +58,13 @@ function (oj, ko, $) {
   //  - konfiguriere den Router, sodass die Module 'search' (Label: Suche, Default-Ansicht)
   //    und 'artist' (Label: Interpret) bekannt werden.
   //  - es sind keine weiteren Attribute wie z.B. Value erforderlich.
+  // TODO 1.3: Erstelle ein ViewModel das den Router referenziert
+  // FINAL_END
   //  - erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
 
   $(document).ready(function () {
     // TODO 1.4: Synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
-    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers 
+    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers
     //    (siehe ggf. nochmals im Cookbook, Simple Router Beispiel)
     ko.applyBindings(viewModel, document.getElementById('page'));
   });

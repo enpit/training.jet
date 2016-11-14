@@ -62,15 +62,16 @@ function (oj, ko, $) {
     'search': {label: 'Suche', isDefault: true},
     'artist': {label: 'Interpret'}
   });
+  // FINAL_END
   //  - erstelle ein leeres Objekt namens 'viewModel', dessen 'router' Attribut auf den zuvor konfigurierten Router zeigt
   var viewModel = {
     router: router
   };
 
   $(document).ready(function () {
-    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers 
+    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers
     //    (siehe ggf. nochmals im Cookbook, Simple Router Beispiel)
     oj.Router.sync();
-    ko.applyBindings(viewModel, document.getElementById('page'));    
+    ko.applyBindings(viewModel, document.getElementById('page'));
   });
 });

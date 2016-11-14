@@ -73,6 +73,7 @@ function (oj, ko, $) {
     'search': {label: 'Suche', isDefault: true},
     'artist': {label: 'Interpret'}
   });
+  // FINAL_END
   // WORKSHOP_START
   // TODO 1.3: Erstelle ein ViewModel das den Router referenziert
   // WORKSHOP_END
@@ -88,14 +89,14 @@ function (oj, ko, $) {
     // WORKSHOP_START
     // TODO 1.4: Synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
     // WORKSHOP_END
-    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers 
+    //  - ergänze den fehlenden Aufruf der `sync` Funktion des Routers
     //    (siehe ggf. nochmals im Cookbook, Simple Router Beispiel)
     // WORKSHOP_START
     ko.applyBindings(viewModel, document.getElementById('page'));
     // WORKSHOP_END
     // FINAL_START
     oj.Router.sync();
-    ko.applyBindings(viewModel, document.getElementById('page'));    
+    ko.applyBindings(viewModel, document.getElementById('page'));
     // FINAL_END
   });
 });
