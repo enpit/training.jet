@@ -1,7 +1,7 @@
 <div id="artist">
     <div data-bind="with: artist">
         <div class="cover-container" data-bind="if: images.length > 0">
-            <div role="img" class="artist-image cover" data-bind="style: { backgroundImage: 'url(\'' + cover.url + '\')' }">
+            <div role="img" class="artist-image cover" data-bind="style: { backgroundImage: 'url(\'' + images[0].url + '\')' }">
             </div>
         </div>
         <h1 data-bind="text: name"></h1>
