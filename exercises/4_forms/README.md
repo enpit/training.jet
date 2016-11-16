@@ -86,6 +86,10 @@ Wenn noch Zeit ist, kann ein [Converter](http://www.oracle.com/webfolder/technet
 
 - [Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html)
 - [MDN: Web API](https://developer.mozilla.org/en-US/docs/Web/API)
+- Flexbox:
+  - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  - [Flexbox Froggy](http://flexboxfroggy.com/)
+  - [Flex Layout @ Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=flex&demo=basics)
 
 ## Lösung
 
