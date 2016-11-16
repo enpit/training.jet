@@ -23,9 +23,9 @@ In einer Bonusaufgabe können außerdem weitere Visualisierungsmöglichkeiten au
 > Es ist zu empfehlen, als erstes die Anwendung zu starten (`Run` Kommando in NetBeans / `grunt serve` im Terminal) und das Browserfenster während der Entwicklung offen zu lassen.
 
 Für diese Übung wurden einige Zeilen Code, die mit der Darstellung der Liste der Suchergebnisse zusammenhängen, aus dem Such-Modul entfernt.
-Als Resultat erscheint beim Starten der Anwendung zunächst wieder eine leere weiße Box, auch der Header wird nicht mehr angezeigt.
+Als Resultat erscheint beim Starten der Anwendung zwar wieder das Suchfeld, hat aber noch keine weitere Funktionalität.
 
-### I. Darstellung der Suchergebnisse
+### Teil 1: Darstellung der Suchergebnisse
 
 Stelle die Suchergebnisse in einer ListView dar.
 
@@ -39,10 +39,10 @@ Stelle die Suchergebnisse in einer ListView dar.
 Zwischenergebnis: Die Suche ist wieder funktional; ein Klick auf den Button eines Interpreten löst die Navigation zur *artist* View aus.
 Die `artist`-View ansich ist noch leer.
 
-### II. Visualisierung der Alben des Interpreten
+### Teil 2: Visualisierung der Alben des Interpreten
 
 Die Alben des Interpreten sollen in einem Balkendiagramm visualisiert werden.
-Das zu implementierende Diagramm ist eine modifizierte und vereinfachte Version des entsprechenden [Cookbook-Beispiels](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default). 
+Das zu implementierende Diagramm ist eine modifizierte und vereinfachte Version des entsprechenden [Cookbook-Beispiels](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default).
 
   1. Erstelle die benötigte Datenquelle als Observable-Array (`artist.js`)
   2. Füge die von der Spotify Web API zurückgegebenen Album-Details zur Datenquelle hinzu (`artist.js`)
@@ -53,7 +53,7 @@ Das zu implementierende Diagramm ist eine modifizierte und vereinfachte Version 
 Zwischenergebnis: Ein Balkendiagramm zeigt die Alben des gewählten Interpreten sowie deren relative Popularität an.
 Bei Klick auf einen der Balken wird die Navigation zur 'album'-View ausgelöst (welche Bild und Name des Albums anzeigt).
 
-### III. Bonus: Visualisierung der Tracks eines Albums 
+### Teil 3 (Bonus): Visualisierung der Tracks eines Albums
 
 Wähle eine weitere Visualisierungsmöglichkeit und setze diese in der 'album'-View um.
 

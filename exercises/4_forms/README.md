@@ -21,7 +21,7 @@ Dem Teilnehmer sollen die Konzepte für das Erstellen und Validieren von Formula
 Der Rumpf des Formular-Moduls existiert bereits, ebenso die Navigation dorthin (Plus-Button im Header oben rechts).
 Das Erstellen der Controls sowie deren Validierung und Speichern soll in diesem Aufgabenblock implementiert werden.
 
-### I. Erstellung der Formular-Controls
+### Teil 1: Erstellung der Formular-Controls
 
 Zunächst müssen in `src/js/views/add-artist.html` die Controls für die Dateneingabe erstellt werden.
 Im Cookbook sind einige passende Beispiele in der "Forms" Kategorie zu finden, z.B. für [Nummerneingabe](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=inputNumber&demo=inputNumber).
@@ -34,7 +34,7 @@ Im Cookbook sind einige passende Beispiele in der "Forms" Kategorie zu finden, z
 Zwischenergebnis: Das Formular rendert alle Labels, die definierten Controls aber nur teilweise.
 Da die benötigten Observables noch nicht vorhanden sind, tritt ein `ReferenceError` auf.
 
-### II. Implementierung der Observables
+### Teil 2: Implementierung der Observables
 
 Implementiere jetzt die nötigen Observables (`add-artist.js`).
 
@@ -42,7 +42,7 @@ Zwischenergebnis: Alle Controls werden fehlerfrei angezeigt.
 Der Anwender kann bereits Eingaben machen.
 Es gibt weiterhin noch keine Validierung und bei Klick auf Save geschieht nichts.
 
-### III. Vorbereitung Validierung 
+### Teil 3: Vorbereitung Validierung
 
 Für die Validierung ist außerdem ein `InvalidComponentTracker` notwending, der bei Bedarf den Status der Validierung für alle Controls verwaltet.
 
@@ -50,7 +50,7 @@ Für die Validierung ist außerdem ein `InvalidComponentTracker` notwending, der
 
 Zwischenergebnis: Keine sichtbare Änderung zum vorigen Stand.
 
-### IV. Umsetzung Validierung
+### Teil 4: Umsetzung Validierung
 
 Für die Validierung werden wir folgende Regeln umsetzen:
 
@@ -69,17 +69,17 @@ Teilschritte (alle in `src/js/views/add-artist.html`):
 Zwischenergebnis: Leerwerte beim Name werden abgefangen, ebenso ungültige Zahlen beim Gründungsjahr und eine ungültige Auswahl beim Genre.
 Leereingaben beim Gründungsjahr sind erlaubt.
 
-### V. Implementierung der `save` Funktion 
+### Teil 5: Implementierung der `save` Funktion
 
 Abschließend muss in `add-artist.js` noch die Logik der `save` Funktion umgesetzt werden.
 Normalerweise würde an dieser Stelle eine Funktion aufgerufen werden, die bspw. die gemachten Eingaben per REST-Call an einen Webservice sendet.  
 Für unsere Zwecke reicht es aus, die gemachten Eingaben per `alert` oder `console.log` auszugeben.
 
 Anschließend soll zurück zur vorigen View navigiert werden (was nicht zwangsweise die `search`-View ist).
-Das globale [`window.history` Objekt](https://developer.mozilla.org/en-US/docs/Web/API/History_API) bietet diese Funktionalität an. 
+Das globale [`window.history` Objekt](https://developer.mozilla.org/en-US/docs/Web/API/History_API) bietet diese Funktionalität an.
 
-### VI. (Bonus) Automatische Konvertierung des Inputs  
-  
+### Teil 6 (Bonus): Automatische Konvertierung des Inputs  
+
 Wenn noch Zeit ist, kann ein [Converter](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=inputNumber&demo=inputNumberConverter) geschrieben werden der das Gründungsjahr auf ganze Zahlen rundet (`add-artist.html`).
 
 ## Referenzen:

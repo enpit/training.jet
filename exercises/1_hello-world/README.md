@@ -12,6 +12,10 @@ $ cd exercises/1_hello-world
 $ npm install
 ```
 
+### Vorbereitung - Am Schulungstag
+
+Um eventuelle kurzfristige Updates an den Schulungsunterlagen zu erhalten, bitte einmalig zu Beginn der Schulung im Root-Verzeichnis des Projekts `git pull` ausführen.
+
 ## Lernziel
 
 Ziel ist es, dass die Schulungsteilnehmer eine erste Oracle JET Anwendung mit Two-Way Data-Binding programmieren sowie erste Erfahrungen mit der Verwendung des JET Cookbooks machen.

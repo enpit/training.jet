@@ -22,7 +22,7 @@ Die Schulungsteilnehmer sollen nach Abschluss dieser Session in der Lage sein, d
 > So kann während der Entwicklung stetig der eigene Fortschritt überprüft werden.
 > Hinweis: Die Dateien `header.js` und `header.html` müssen nicht angepasst werden.
 
-### I. Router Konfiguration (`main.js`)
+### Teil 1: Router Konfiguration (`main.js`)
 
 Wenn die Anwendung gestartet wird, erscheint zunächst lediglich eine leere weiße Box; der bereits imlementierte Header kann nicht geladen werden da die Instanziierung des ViewModels in `main.js` noch fehlschlägt.
 Zunächst muss also in `src/js/main.js` das ViewModel korrekt erstellt werden und außerdem die bereits existierende statische `ojRouter` Instanz für unsere Zwecke konfiguriert werden.
@@ -36,7 +36,7 @@ Die auszuführenden Schritte sind dann wie folgt:
 
 Zwischenergebnis: Die Instanziierung des ViewModels ist erfolgreich, sodass der Header korrekt geladen werden kann (das enpit-Logo und der Schriftzug "JET Spotify Explorer" erscheinen).
 
-### II. Anzeigen der aktuellen View-Komponente
+### Teil 2: Anzeigen der aktuellen View-Komponente
 
 Es wird weiterhin lediglich eine leere weiße Box angezeigt, da in `src/index.html` der aktuelle Status des Routers für die Anzeige der entsprechenden View benötigt wird.
 
@@ -45,10 +45,10 @@ Es wird weiterhin lediglich eine leere weiße Box angezeigt, da in `src/index.ht
 Zwischenergebnis: Das div-Element in der `index.html` zeigt die View an, die im Router gerade aktiv ist.
 In unserem Fall ist das die Suchansicht.
 
-### III. Implementierung der Suche
+### Teil 3: Implementierung der Suche
 
 Die Suche funktioniert allerdings noch nicht.
-Hierfür müssen in `src/js/viewModels/search.js` und `src/js/view/search.html` einige Anpassungen vorgenommen werden: 
+Hierfür müssen in `src/js/viewModels/search.js` und `src/js/view/search.html` einige Anpassungen vorgenommen werden:
 
   1. Importiere die fehlenden Module (`search.js`)
   2. Mache das `spotify`-Modul im Body des `search`-Moduls bekannt (`search.js`)
@@ -58,7 +58,7 @@ Hierfür müssen in `src/js/viewModels/search.js` und `src/js/view/search.html` 
 Zwischenergebnis: Die Suche funktioniert, es kann nach Interpreten gesucht werden, deren Namen dann in einer Liste angezeigt und als Buttons gerendert werden.
 Ein Klick auf einen der Buttons navigiert den Benutzer zur `artist` View, die allerdings noch leer ist.
 
-### IV. (Bonus) Erstellung des `artist` Moduls
+### Teil 4 (Bonus): Erstellung des `artist` Moduls
 
 > Dies ist eine Bonus-Aufgabe für Teilnehmer, die vor Ablauf der Zeit bereits mit den vorigen Aufgaben fertig geworden sind oder nach der Schulung ihre Kenntnisse noch vertiefen wollen.
 
