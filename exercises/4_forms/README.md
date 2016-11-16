@@ -23,8 +23,8 @@ Das Erstellen der Controls sowie deren Validierung und Speichern soll in diesem 
 
 ### I. Erstellung der Formular-Controls
 
-Zunächst müssen in `src/js/view` die Controls für die Dateneingabe erstellt werden.
-Im Cookbook sind einige passende Beispiele in der "Forms" Kategorie zu finden, z.B. für [Nummerneingabe](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=inputNumber&demo=inputNumber). 
+Zunächst müssen in `src/js/views/add-artist.html` die Controls für die Dateneingabe erstellt werden.
+Im Cookbook sind einige passende Beispiele in der "Forms" Kategorie zu finden, z.B. für [Nummerneingabe](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=inputNumber&demo=inputNumber).
 
   1. Erstelle das 'name' [input-Element (Text)](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=textInput&demo=text) und ein zugehöriges Label
   2. Erstelle das 'genre' [select-Element](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=select&demo=single) und ein zugehöriges Label
