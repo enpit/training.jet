@@ -6,7 +6,7 @@ define([
   'knockout',
   'jquery',
   /*
-   * TODO 3.1: Importiere die fehlenden Module 
+   * TODO 3.1: Importiere die fehlenden Module
    * importiere das 'spotify' Modul
    * importiere das 'knockout-postbox' Modul
    */
@@ -19,7 +19,7 @@ define([
  *   eingefügt werden
  *    - beachte die richtige Reihenfolge der Parameter!
  *    - da im Code bereits Referenzen auf das `spotify`-Modul existieren,
- *      sollte der Parameter 'spotify' lauten  
+ *      sollte der Parameter 'spotify' lauten
  * - knockout-postbox wird automatisch an 'ko' gebunden
  */
 ], function (oj, ko, $) {

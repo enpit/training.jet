@@ -14,7 +14,6 @@ define([
   'ojs/ojarraytabledatasource',
   'ojs/ojselectcombobox',
   'ojs/ojlistview'
-/*
 ], function (oj, ko, $, spotify) {
   /**
    * The view model for the search module

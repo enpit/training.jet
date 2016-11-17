@@ -7,7 +7,7 @@ define([
   'jquery',
   /*
   // WORKSHOP_START
-   * TODO 3.1: Importiere die fehlenden Module 
+   * TODO 3.1: Importiere die fehlenden Module
   // WORKSHOP_END
    * importiere das 'spotify' Modul
    * importiere das 'knockout-postbox' Modul
@@ -19,14 +19,14 @@ define([
   'ojs/ojarraytabledatasource',
   'ojs/ojselectcombobox',
   'ojs/ojlistview'
-/*
 // WORKSHOP_START
+/*
  * TODO 3.2: Mache das `spotify`-Modul im Body des `search`-Moduls bekannt
  * - hierfür muss ein weiterer Parameter in die untenstehende Funktionsdeklaration
  *   eingefügt werden
  *    - beachte die richtige Reihenfolge der Parameter!
  *    - da im Code bereits Referenzen auf das `spotify`-Modul existieren,
- *      sollte der Parameter 'spotify' lauten  
+ *      sollte der Parameter 'spotify' lauten
  * - knockout-postbox wird automatisch an 'ko' gebunden
  */
 ], function (oj, ko, $) {
