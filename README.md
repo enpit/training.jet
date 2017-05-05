@@ -18,9 +18,8 @@ Die Hands-On Sessions orientieren sich an unserer Beispielanwendung [Spotify-Exp
 2. [node.js](https://nodejs.org/en/) Version 4 oder 6 installieren
 3. Grunt CLI und Bower per Kommandozeile installieren: `npm install --global grunt-cli bower`
 4. [Chrome Browser](https://www.google.de/chrome/browser/desktop) (aktuelle Version) installieren
-5. Als IDE empfehlen wir [NetBeans](https://netbeans.org/index.html) (HTML5/JavaScript Edition, Version 8.2) oder [Visual Studio Code](http://code.visualstudio.com/) 1.6.
+5. Als IDE empfehlen wir [NetBeans](https://netbeans.org/index.html) (HTML5/JavaScript Edition) oder [Visual Studio Code](http://code.visualstudio.com/) in der jeweils aktuellen Version.
 6. Dieses Repository herunterladen (ZIP-Datei per Webinterface herunterladen & entpacken, oder `git clone https://github.com/enpit/training.jet` ausführen)
- - es werden mit hoher Wahrscheinlichkeit noch einige kurzfristige Änderungen an diesem Repository vorgenommen werden; daher sollte dieser und der folgende Schritt kurz vor der Schulung (nochmals) durchgeführt werden
 7. Per Kommandozeile **im jedem Ordner in `exercises`** die benötigten Module installieren:
 ``` cmd
 $ cd exercises/1_hello-world/ && npm install
