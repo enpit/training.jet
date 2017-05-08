@@ -1,6 +1,6 @@
 # enpit.training.jet
 
-Materialien für den [DOAG 2016 Schulungstag "Durchstarten mit Oracle JET" am 18.11.2016](http://2016.doag.org/de/programm/schulungstag/#tab-9929-1).
+Materialien "Durchstarten mit Oracle JET"
 
 ## Beispielanwendung
 
