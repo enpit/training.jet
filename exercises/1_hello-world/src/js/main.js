@@ -50,7 +50,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext'
         /*
          * TODO 2: Deklariere ein Knockout Observable
          * - erstelle ein Knockout Observable mit dem Namen 'vorname' und
-         * setze ihn z.B. auf 'DOAG2016'
+         * setze ihn z.B. auf 'DOAG'
          */
       }
       var viewModel, element;
