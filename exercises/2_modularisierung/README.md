@@ -32,7 +32,7 @@ Die auszuführenden Schritte sind dann wie folgt:
   1. Importiere das fehlende `ojs/ojrouter` Modul
   2. Konfiguriere den `ojRouter` für diese Anwendung
   3. Erstelle ein ViewModel das den Router referenziert
-  4. Synchronisiere den `ko.applyBindings` Aufruf mit der Initialisierung des Routers
+  4. Synchronisiere den Router vor der Initialisierung des Root ViewModels mittels `ko.applyBindings`
 
 Zwischenergebnis: Die Instanziierung des ViewModels ist erfolgreich, sodass der Header korrekt geladen werden kann (das enpit-Logo und der Schriftzug "JET Spotify Explorer" erscheinen).
 
