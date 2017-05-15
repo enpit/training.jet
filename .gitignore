@@ -12,3 +12,4 @@ hybrid/plugins/*
 !hybrid/plugins/fetch.json
 
 nbproject
+npm-debug.log
